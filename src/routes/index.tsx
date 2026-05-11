@@ -27,8 +27,8 @@ function Index() {
       <header className="border-b border-neutral-200">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
           <img
-            src="https://fintechfrontiers.live/wp-content/uploads/2024/07/FTF-logo-01-e1720457608366-1.png"
-            alt="Financial Technology Frontier"
+            src="https://www.sarzamin.ca/assets/sarzamin-logo-B9cWihGl.png"
+            alt="Sarzamin"
             className="h-10 w-auto"
           />
           <div className="flex items-center gap-6">
