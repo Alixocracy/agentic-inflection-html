@@ -73,15 +73,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "FTF" },
-      { name: "description", content: "FTF - Financial Technology Frontier. How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflection." },
+      { name: "description", content: "FTF - FINANCIAL TECHNOLOGY FRONTIER
+How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflecti" },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "FTF" },
-      { property: "og:description", content: "FTF - Financial Technology Frontier. How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflection." },
+      { property: "og:description", content: "FTF - FINANCIAL TECHNOLOGY FRONTIER
+How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflecti" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "FTF" },
-      { name: "twitter:description", content: "FTF - Financial Technology Frontier. How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflection." },
+      { name: "twitter:description", content: "FTF - FINANCIAL TECHNOLOGY FRONTIER
+How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflecti" },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9417ac06-fca0-4438-b7a0-a06aa6495968" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9417ac06-fca0-4438-b7a0-a06aa6495968" },
     ],
