@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delivering Canada&amp;#x27;s Real-Time Rail — Session 16 — Financial Technology Frontiers</title>
+<meta name="description" content="Delivering Canada&amp;#x27;s Real-Time Rail — Payments Canada Summit 2026 coverage by Financial Technology Frontiers.">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, "system-ui", Lato, Roboto, "Helvetica Neue", Arial, sans-serif; color: rgb(25,27,29); background:#fff; font-size:16px; line-height:1.6; }
+  a { color: rgb(25,27,29); text-decoration: none; }
+  a:hover { color: rgb(200,8,21); }
+  img { max-width: 100%; height: auto; display: block; }
+
+  .site-header { background:#f6f6f6; border-bottom:1px solid #ececec; }
+  .site-header-inner { max-width:1500px; margin:0 auto; padding:18px 20px; display:grid; grid-template-columns: minmax(260px,360px) 1fr auto; align-items:center; gap:28px; }
+  .site-logo img { max-height:78px; width:auto; }
+  .site-search { display:flex; align-items:stretch; width:100%; max-width:600px; background:transparent; border:0; border-radius:999px; box-shadow:0 0 3px 0 rgba(0,0,0,.11), 0 1.6px 3.6px 0 rgba(0,0,0,.13); }
+  .site-search input { flex:1; min-width:0; border:1px solid rgb(211,206,210); border-right:0; outline:0; padding:6px 16px; height:38px; font-size:14.4px; background:#fff; color:#3c4043; font-family:inherit; border-radius:999px 3px 3px 999px; }
+  .site-search input::placeholder { color:#80868b; opacity:1; }
+  .site-search button { background:rgb(200,8,21); color:#fff; border:0; padding:8.5px 18px; height:38px; font-size:14.24px; font-weight:400; font-family:inherit; cursor:pointer; border-radius:3px 999px 999px 3px; margin:0; min-width:96px; transition:background-color .12s ease; }
+  .site-search button:hover { background-color:rgb(170,6,18); }
+  .site-social { display:flex; gap:14px; align-items:center; color:#444; }
+  .site-social a { color:#444; font-size:18px; display:inline-flex; }
+  .site-social svg { width:20px; height:20px; }
+
+  .main-navigation { background:#fff; border-top:1px solid #ececec; border-bottom:1px solid #ececec; }
+  .main-navigation-inner { max-width:1500px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:0; }
+  .main-navigation ul.primary-menu { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; }
+  .main-navigation ul.primary-menu > li { position:relative; }
+  .main-navigation ul.primary-menu > li > a { display:inline-flex; align-items:center; gap:4px; padding:22px 18px; font-size:15px; font-weight:500; letter-spacing:0; text-transform:uppercase; color:rgb(25,27,29); border-bottom:3px solid transparent; transition:border-color .12s ease, color .12s ease; }
+  .main-navigation ul.primary-menu > li > a:hover, .main-navigation ul.primary-menu > li:hover > a { color:rgb(25,27,29); border-bottom-color:rgb(200,8,21); }
+  .main-navigation ul.primary-menu > li.has-children > a::after { content:""; display:inline-block; width:9px; height:9px; margin-left:6px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-2px); opacity:.7; }
+  .main-navigation ul.sub-menu { list-style:none; margin:0; padding:0; position:absolute; top:100%; left:0; min-width:220px; background:#fff; box-shadow:0 5px 5px 0 rgba(0,0,0,.3); z-index:50; display:none; }
+  .main-navigation ul.primary-menu > li:hover > ul.sub-menu, .main-navigation ul.primary-menu > li:focus-within > ul.sub-menu { display:block; }
+  .main-navigation ul.sub-menu li { border-bottom:1px solid rgba(32,33,36,.15); }
+  .main-navigation ul.sub-menu li:last-child { border-bottom:0; }
+  .main-navigation ul.sub-menu li a { display:block; padding:10px 15px; font-size:15.5px; font-weight:400; color:rgb(25,27,29); background:transparent; text-transform:capitalize; line-height:1.35; white-space:nowrap; transition:background-color .12s ease, color .12s ease; }
+  .main-navigation ul.sub-menu li a:hover, .main-navigation ul.sub-menu li:hover > a { background-color:rgb(200,8,21); color:#fff; }
+  .nav-right { margin-left:auto; display:flex; align-items:center; gap:14px; }
+  .nav-right .shuffle { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; color:#444; }
+  .nav-right .subscription { display:inline-flex; align-items:center; gap:8px; border:1px solid #d8d8d8; border-radius:999px; padding:8px 18px; font-weight:500; font-size:13.5px; }
+  .nav-right .subscription .bell { font-size:14px; }
+
+  .site-content { background:#fafafa; }
+  .site-content-inner { max-width:1500px; margin:0 auto; padding:36px 20px 64px; display:grid; grid-template-columns: minmax(0,1fr) 396px; gap:56px; }
+
+  .article-main { min-width:0; }
+  .entry-title { font-size:33.76px; line-height:1.2; font-weight:700; margin:0 0 14px 0; color:rgb(25,27,29); letter-spacing:-0.01em; }
+  .entry-meta { color:#666; font-size:14px; margin:0 0 18px 0; }
+  .entry-meta .byline { color:#333; font-weight:600; }
+  .entry-hero { margin:8px 0 28px 0; }
+  .entry-hero img { width:100%; border-radius:2px; }
+  .entry-content { font-size:16.5px; line-height:1.75; color:#1d1f21; }
+  .entry-content h2 { font-size:22px; font-weight:700; margin:34px 0 12px; line-height:1.3; color:rgb(25,27,29); }
+  .entry-content h3 { font-size:18px; font-weight:700; margin:26px 0 8px; }
+  .entry-content p { margin:0 0 14px 0; }
+  .entry-content strong { color:#111; }
+  .entry-content blockquote { margin:18px 0; padding:6px 18px; border-left:4px solid rgb(200,8,21); background:#fff; color:#2a2c2e; font-style:italic; }
+  .entry-content blockquote p { margin:8px 0; }
+  .entry-content ul { margin:6px 0 14px 22px; padding:0; }
+  .entry-content li { margin:4px 0; }
+  .entry-content hr { border:0; border-top:1px solid #e3e3e3; margin:28px 0; }
+  .entry-content figure { margin:28px 0; }
+  .entry-content figure img { width:100%; display:block; border-radius:2px; }
+  .entry-content figure figcaption { font-size:13.5px; color:#6a6c6e; line-height:1.5; margin-top:8px; padding-left:12px; border-left:3px solid rgb(200,8,21); font-style:italic; }
+  .entry-content .deck { font-size:18px; line-height:1.55; color:#333; font-weight:500; margin:0 0 22px 0; }
+
+  .site-sidebar { font-size:15px; }
+  .widget { margin:0 0 38px 0; }
+  .widget-title { font-size:24px; font-weight:700; margin:0 0 18px; color:rgb(25,27,29); }
+  .widget-list { list-style:none; padding:0; margin:0; }
+  .widget-list li { display:grid; grid-template-columns:84px 1fr; gap:14px; padding:14px 0; border-bottom:1px solid #e7e7e7; align-items:flex-start; }
+  .widget-list li:last-child { border-bottom:0; }
+  .widget-list .thumb { width:84px; height:84px; border-radius:2px; background-size:cover; background-position:center; background-color:#e7e7e7; }
+  .widget-list .item-body { font-size:14.5px; line-height:1.45; color:#1d1f21; }
+  .widget-list .item-body a { font-weight:600; color:#1d1f21; }
+  .widget-list .item-body a:hover { color:rgb(200,8,21); }
+  .widget-list .excerpt { color:#555; font-size:13.5px; margin-top:4px; }
+
+  .site-footer { background:rgb(28,28,28); color:#d9d9d9; }
+  .site-footer a { color:#d9d9d9; }
+  .site-footer a:hover { color:#fff; }
+  .footer-widgets { max-width:1500px; margin:0 auto; padding:60px 20px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; }
+  .footer-widgets h3 { color:#fff; font-size:22px; margin:0 0 18px; font-weight:700; }
+  .footer-widgets p { margin:0 0 14px; line-height:1.6; }
+  .footer-widgets .follow { font-weight:700; color:#fff; margin-top:24px; padding-top:14px; position:relative; }
+  .footer-widgets .follow::before { content:""; position:absolute; top:0; left:0; width:38px; height:2px; background:rgb(200,8,21); }
+  .footer-social { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .footer-social a { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:4px; font-size:13.5px; background:rgba(255,255,255,.08); }
+  .footer-social a.twitter { background:rgba(200,8,21,.85); color:#fff; }
+  .footer-links { list-style:none; padding:0; margin:0; }
+  .footer-links li { margin:0 0 12px; }
+  .site-info { border-top:1px solid rgba(255,255,255,.08); text-align:center; padding:22px 20px; font-size:13.5px; }
+
+  @media (max-width:1100px) { .site-content-inner { grid-template-columns:1fr; } .footer-widgets { grid-template-columns:1fr 1fr; } }
+  @media (max-width:760px) {
+    .site-header-inner { grid-template-columns:1fr; gap:16px; }
+    .nav-right { display:none; }
+    .main-navigation ul.primary-menu > li > a { padding:14px 10px; font-size:13px; }
+    .main-navigation ul.sub-menu { position:static; box-shadow:none; padding:0 0 0 12px; min-width:0; }
+    .main-navigation ul.sub-menu li a { padding:8px 12px; font-size:13.5px; }
+    .entry-title { font-size:27px; }
+    .footer-widgets { grid-template-columns:1fr; }
+  }
+  /* ---------- Cover Story (sidebar) ---------- */
+  .widget.coverstory-widget {
+    margin: 0 0 28px 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 6px solid rgb(200, 8, 21);
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    border-radius: 2px;
+  }
+  .widget.coverstory-widget .cs-flag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgb(200, 8, 21);
+    padding: 5px 10px;
+    border-radius: 2px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .widget.coverstory-widget .cs-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    color: rgb(25, 27, 29);
+  }
+  .widget.coverstory-widget .cs-body {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 12px;
+  }
+  .widget.coverstory-widget .cs-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: rgb(200, 8, 21);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .widget.coverstory-widget .cs-cta a:hover { color: rgb(170, 6, 18); }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://fintechfrontiers.live/" class="site-logo" aria-label="Financial Technology Frontiers">
+      <img src="https://fintechfrontiers.live/wp-content/uploads/2024/07/FTF-logo-01-e1720457608366-1.png" alt="Financial Technology Frontiers" width="343" height="101">
+    </a>
+    <form class="site-search" role="search" action="https://fintechfrontiers.live/" method="get">
+      <input type="search" name="s" placeholder="Search …" aria-label="Search">
+      <button type="submit">Search</button>
+    </form>
+    <div class="site-social" aria-label="Social">
+      <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.755l-4.71-6.18L4.94 22H2.18l6.98-7.98L2 2h6.928l4.252 5.62L18.244 2Zm-2.37 18h1.87L8.21 4H6.22l9.654 16Z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2 .6 9.4.6 9.4.6s7.4 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.2 31.2 0 0 0 .5-5.8 31.2 31.2 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.5 18V10.4H6V18h2.5Zm-1.25-8.65a1.45 1.45 0 1 0 0-2.9 1.45 1.45 0 0 0 0 2.9ZM18 18v-4.3c0-2.3-1.2-3.4-2.85-3.4-1.3 0-1.9.72-2.25 1.23V10.4H10.4v7.6h2.5v-4c0-1.07.2-2.1 1.5-2.1 1.3 0 1.3 1.2 1.3 2.17V18H18Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<nav class="main-navigation" aria-label="Primary">
+  <div class="main-navigation-inner">
+    <ul class="primary-menu">
+      <li><a href="https://fintechfrontiers.live/">Home</a></li>
+      <li class="has-children">
+        <a href="#">About</a>
+        <ul class="sub-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Meet Our Team</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offerings</a></li>
+      <li><a href="#">Advisors</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Markets &amp; Lending</a></li>
+      <li><a href="#">Insurance</a></li>
+      <li class="has-children">
+        <a href="#">Tech</a>
+        <ul class="sub-menu">
+          <li><a href="#">Fintech</a></li>
+          <li><a href="#">Regtech</a></li>
+          <li><a href="#">Insuretech</a></li>
+        </ul>
+      </li>
+      <li class="has-children">
+        <a href="#">Ecosystem</a>
+        <ul class="sub-menu">
+          <li><a href="#">Government Regulators</a></li>
+          <li><a href="#">Accelerators</a></li>
+          <li><a href="#">Associations &amp; Federations</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="shuffle" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17 3 21 7l-4 4v-3h-2.5a3 3 0 0 0-2.5 1.3l-1.5 2.2-1.3-1.9 1.2-1.7A5 5 0 0 1 14.5 6H17V3ZM3 7h3.5a5 5 0 0 1 4.1 2.2l4.3 6.2A3 3 0 0 0 17.5 17H17v3l4-4-4-4v3h.5-.5a5 5 0 0 1-4.1-2.2L8.6 6.6A3 3 0 0 0 6.1 5H3v2Zm0 10h3.5a3 3 0 0 0 2.5-1.3L10.3 14l1.3 1.9-1.2 1.7A5 5 0 0 1 6.5 19H3v-2Z"/></svg></span>
+      <span class="subscription"><span class="bell">&#128276;</span> Subscription</span>
+    </div>
+  </div>
+</nav>
+
+<div class="site-content">
+  <div class="site-content-inner">
+
+    <main class="article-main">
+      <article>
+<h1 class="entry-title">Delivering Canada&#x27;s Real-Time Rail</h1>
+        <p class="entry-meta">Session 16 · Payments Canada Summit 2026</p>
+        <p class="entry-meta"><strong>Panel</strong> &nbsp;·&nbsp; Anuj Dhall (Interac); Jeff Holan (IBM Canada); Rob M (CGI); Payments Canada</p>
+        <p class="entry-meta byline">By <a href="https://www.linkedin.com/in/moghadam/" target="_blank" rel="noopener">Alix Moghadam</a> · Advisor, Research &amp; Content · <a href="index.html">Financial Technology Frontier</a></p>
+
+        <figure class="entry-hero">
+          <img src="images/session-16-hero.jpg" alt="Delivering Canada&amp;#x27;s Real-Time Rail">
+        </figure>
+
+        <div class="entry-content">
+<h2>Delivering Canada's Real-Time Rail</h2>
+<p>Canada's Real-Time Rail (RTR) initiative took another visible step toward launch this week as leaders from across the country's payments ecosystem used the Payments Canada Summit stage to outline operational milestones, launch timelines, and the broader economic ambitions behind the project.</p>
+<p>Executives from Interac Corp., IBM Canada, CGI Inc., and Payments Canada described the RTR not simply as a technology modernization effort, but as <strong>a foundational national capability designed to support innovation, resilience, and long-term economic growth</strong>.</p>
+<h2>Launch Timeline</h2>
+<figure><img src="images/session-16-2.jpg" alt="" loading="lazy"></figure>
+
+<p>The panel confirmed that <strong>industry testing for RTR will begin in calendar Q3, with launch targeted for Q4</strong> following successful testing and onboarding phases. Deployment will happen gradually, beginning with direct exchange participants before expanding to institutions migrating from the existing Interac e-Transfer ecosystem.</p>
+<blockquote>
+<p>"We will start in a wave approach, starting with direct exchange participants, and then followed closely by our conversion participants coming from e-transfer. This ensures that the system remains safe, secure, resilient, in a live environment."</p>
+</blockquote>
+<p>Speakers emphasized that Canada's implementation is unusually complex because it combines the launch of a new real-time clearing and settlement framework with the migration of an already mature, widely used faster-payments system.</p>
+<blockquote>
+<p><strong>"We're one of the few countries that include a conversion of an in-market solution for faster payments to real-time, line-by-line clearing and settlements,"</strong> the moderator noted.</p>
+</blockquote>
+<h2>Anuj Dhall (Interac): Invisible Infrastructure</h2>
+<p>Representing Interac, Anuj Dhall described the operational philosophy guiding the system's rollout in strikingly simple terms: <strong>success should appear uneventful to Canadians.</strong></p>
+<blockquote>
+<p><strong>"The key word is operability,"</strong> Dhall said. "Reaching this major milestone is about being ready to operate the stack."</p>
+</blockquote>
+<p>He explained that the ideal customer experience is effectively invisible infrastructure.</p>
+<blockquote>
+<p><strong>"We don't want you to know that anything's going on if we're doing our job well. It's about being ready to turn this on and actually operate and run it in a secure and sustained system each and every day."</strong></p>
+</blockquote>
+<p>Dhall repeatedly returned to the concept of trust. Canadians already expect money to move instantly and reliably through Interac systems without having to think about the infrastructure behind it, he said, and RTR must preserve that same level of confidence.</p>
+<blockquote>
+<p>"When you send money to someone, you just trust it's going to arrive. You trust it's going to be there. You don't think about it. And that's how we have to operate with RTR as well."</p>
+</blockquote>
+<p>Behind that seamless experience, however, lies extensive operational preparation. Dhall described the deployment of <strong>more than 30 observability and operational monitoring tools</strong>, large-scale staffing efforts, security investments, and the creation of operational procedures designed to proactively identify and resolve issues before they impact users.</p>
+<p>Cybersecurity emerged as one of the session's strongest themes. Dhall emphasized that in today's environment, launching a national real-time payment rail requires constant vigilance.</p>
+<blockquote>
+<p><strong>"It's just so important as we launch this new capability that it is absolutely secure, that it's bulletproof. All eyes will be on us."</strong></p>
+</blockquote>
+<h2>Jeff Holan (IBM): Technology, Process, People</h2>
+<p>Representing IBM, Jeff Holan focused on operational readiness from a systems perspective, describing launch preparation as a balance between technology, process, and people.</p>
+<blockquote>
+<p><strong>"It's the technology, it's the process, and it's the people. The people are being trained on the operations, testing all three of them together, making sure the system is ready to go live."</strong></p>
+</blockquote>
+<p>Holan noted that readiness extends beyond launch day itself. RTR, he argued, will need to evolve continuously as threats, participant expectations, and use cases change over time.</p>
+<blockquote>
+<p>"After we go live, it is change. Whether that's security threats, whether that's new features for the RTR and new demands on the RTR."</p>
+</blockquote>
+<h2>Rob M (CGI): Resilience and Capacity</h2>
+<p>From CGI's perspective, operational resilience and scalability remain the core priorities. Rob M highlighted CGI's decades of experience operating Interac infrastructure as a major source of confidence.</p>
+<blockquote>
+<p><strong>"We've been in partnership with Interac, managed the e-transfer infrastructure for over 25 years. We understand resiliency, security, peak usage requirements that come with a national high-volume payments platform."</strong></p>
+</blockquote>
+<p>That operational history directly influenced the architecture and deployment strategy for RTR.</p>
+<blockquote>
+<p>"For launch, the priority is resiliency and capacity. We've built and designed RTR to support the growth across both e-transfer and RTR with significant headroom for growth."</p>
+</blockquote>
+<p>One key design decision involved separating RTR and e-Transfer infrastructure environments to reduce systemic risk during onboarding and scaling.</p>
+<blockquote>
+<p>"We've also isolated the RTR and e-transfer infrastructure environments as a risk mitigation feature. That gives us clear separation, stronger control, and confidence as RTR moves through testing, onboarding, and launch."</p>
+</blockquote>
+<h2>RTR as a National Ecosystem</h2>
+<p>Throughout the discussion, the panel consistently framed RTR as a national ecosystem initiative rather than a standalone payments product. Speakers highlighted the importance of governance, coordination, participant readiness, and collaborative problem-solving across the financial sector.</p>
+<blockquote>
+<p>"The RTR needs all of the components that are successful long-term — the legal framework, the hardware, the software, the operations. And the biggest component, the participants."</p>
+</blockquote>
+<h2>Closing Reflections: A Geopolitical Moment</h2>
+<p>As the panel shifted toward closing reflections, the conversation moved from operational readiness to the broader meaning of the project for Canada's economy and innovation ecosystem.</p>
+<p>In one of the session's more personal remarks, Dhall reflected on what success would ultimately look like.</p>
+<blockquote>
+<p><strong>"I hope that I mean this the best way possible. Each and every one of you forgets my name. If we've done this well, you won't remember me because everything will be just working as it should be."</strong></p>
+</blockquote>
+<p>He described RTR as <strong>"a national capability in a geopolitical moment"</strong> and emphasized that the ultimate goal extends beyond payments modernization itself.</p>
+<blockquote>
+<p>"Our goal is to get the foundation right, and allow the innovation that we expect to come… accelerate economic growth. That's what this is all about."</p>
+</blockquote>
+<p>Other panelists echoed the idea that the most transformative impact of RTR will emerge only after launch, when developers, businesses, fintechs, and institutions begin building new experiences on top of real-time infrastructure.</p>
+<blockquote>
+<p>"This is the first time we've had this capability in market where we can execute a transaction end to end in real time. We have some ideas as to what value that's going to unlock and some interesting use cases, but I think as that goes to market, people will see that capability is going to unlock some really interesting features and use cases."</p>
+</blockquote>
+<p>Another panelist summarized the current phase as necessary groundwork before the larger innovation cycle begins.</p>
+<blockquote>
+<p>"I'm looking forward to talking about use cases, what we've deployed, what's to come, because I think the success is ahead of us."</p>
+</blockquote>
+<p>The session closed with a strong emphasis on collective responsibility across the Canadian payments ecosystem. Speakers noted that while the infrastructure itself may soon be ready, realizing its full value will depend on how industry participants, financial institutions, fintechs, and innovators choose to use it.</p>
+<blockquote>
+<p>"We can and we are delivering on our shared commitments," the moderator concluded.</p>
+</blockquote>
+<p>In a symbolic moment at the end of the panel, speakers pointed to newly displayed RTR branding replacing their individual corporate identifiers, reinforcing the broader <strong>"Team Canada"</strong> message that has surrounded the initiative since its relaunch.</p>
+<blockquote>
+<p><strong>"In this moment in time, it's this ecosystem's responsibility and accountability to take advantage and create these opportunities of what we're delivering for the country."</strong></p>
+</blockquote>
+<hr />
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Industry testing begins Q3</strong>, launch target <strong>Q4</strong> — wave approach: direct exchange participants first, then e-Transfer conversion participants.</li>
+<li>Canada is unusual: simultaneously <strong>launching a new rail and migrating a mature in-market system</strong> (e-Transfer).</li>
+<li>Interac philosophy: success means <strong>users forget the name</strong> — operations should be invisible.</li>
+<li><strong>30+ observability and monitoring tools</strong> deployed; cyber posture treated as launch-critical.</li>
+<li>CGI/Interac partnership is <strong>25+ years old</strong>; RTR and e-Transfer environments <strong>deliberately isolated</strong> for risk containment.</li>
+<li>Framed as a <strong>"national capability in a geopolitical moment"</strong> — the value comes from what's built on top, post-launch.</li>
+</ul>
+        </div>
+      </article>
+    </main>
+
+    <aside class="site-sidebar" aria-label="Summit Coverage">
+      
+      <section class="widget coverstory-widget">
+        <span class="cs-flag">FTF Cover Story</span>
+        <h3 class="cs-title">The Agentic Inflection</h3>
+        <p class="cs-body">How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. A cover story across all 23 sessions.</p>
+        <div class="cs-cta"><a href="index-new.html">Read the cover story &rarr;</a></div>
+      </section>
+<section class="widget">
+        <h2 class="widget-title">Summit Coverage</h2>
+        <ul class="widget-list">
+          
+          <li>
+            <div class="thumb" style="background-image:url('images/session-00-hero.png');"></div>
+            <div class="item-body">
+              <a href="session-00-new.html">Session 00 — Powering Economic Prosperity Through Payments — Susan Hawkins Opens Day One</a>
+              <div class="excerpt">Day-One opening keynote: Susan E. Hawkins on Canada's payment infrastructure as a national asset for prosperity, sovereignty, and global competitiveness.</div>
+            </div>
+          </li>
+<li>
+            <div class="thumb" style="background-image:url('images/session-01-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-01-new.html">Session 01 — Delivering Digital Prosperity for Canada</a>
+              <div class="excerpt">Opening keynote setting the agenda for Canada's payments modernization and digital prosperity.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-02-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-02-new.html">Session 02 — Outsmarting the Fraud Factories</a>
+              <div class="excerpt">How the industry is moving from reactive to predictive defences against industrial-scale fraud.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-03-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-03-new.html">Session 03 — Canada's Path to Agentic Commerce</a>
+              <div class="excerpt">Mapping the road from today's checkout to autonomous agent-led purchasing.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-04-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-04-new.html">Session 04 — Leading with AI in the New Era of Fraud and Scams</a>
+              <div class="excerpt">AI as the new frontline in fraud detection, prevention, and scam-victim protection.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-04-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-05-new.html">Session 05 — Risk-Resiliency in Payments: Building Trust and Transparency</a>
+              <div class="excerpt">Designing payment systems for resilience, trust, and transparent recovery.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-06-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-06-new.html">Session 06 — Tokenized Deposits: Bridging the Gap to Tomorrow's Digital Economy</a>
+              <div class="excerpt">Why tokenized deposits could become the rails of the next-generation digital economy.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-07-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-07-new.html">Session 07 — From Crypto to Core Infrastructure: Stablecoins in Canadian Payments</a>
+              <div class="excerpt">Stablecoins reframed from a crypto story into core Canadian payments infrastructure.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-08-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-08-new.html">Session 08 — Economies of Machines: Tokenization for Agentic Autonomous Finance</a>
+              <div class="excerpt">Tokenization as the substrate for machine-to-machine, autonomous financial flows.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-09-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-09-new.html">Session 09 — Banking in Disguise: When Every App Becomes a Bank</a>
+              <div class="excerpt">Embedded finance is dissolving the boundary between apps and banks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-10-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-10-new.html">Session 10 — Agentic AI in Payments: The Future of Payments Is Autonomous</a>
+              <div class="excerpt">What changes when AI agents — not humans — initiate, authorize, and settle payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-11-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-11-new.html">Session 11 — The Builders of Tomorrow: How AI Is Powering the New Payments Landscape</a>
+              <div class="excerpt">The builders and platforms shaping AI-native payments stacks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-12-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-12-new.html">Session 12 — Defining the Future of Payments in Canada: The Power of Global Partnerships</a>
+              <div class="excerpt">Why Canada's payments future will be built through cross-border partnerships.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-13-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-13-new.html">Session 13 — Exchanging Ideas with Erin Elofson, President of Mastercard Canada</a>
+              <div class="excerpt">Leadership under uncertainty, responsible AI, and the role of stablecoins — with Mastercard Canada's president.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-14-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-14-new.html">Session 14 — Tokenization Isn't About Crypto. It's About Rewriting the Economics of Payments</a>
+              <div class="excerpt">Tokenization reframed as an economic-architecture story, not a crypto story.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-15-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-15-new.html">Session 15 — Converging Forces: RTR, Open Banking, Stablecoins, Agentic Commerce</a>
+              <div class="excerpt">Four forces converging — and what their intersection means for Canada.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-17-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-17-new.html">Session 17 — Unlocking the Strategic Value of Payments</a>
+              <div class="excerpt">Payments as strategy, not utility: where the real economic value sits.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-18-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-18-new.html">Session 18 — Canada Strong for All: Fireside with Min. François-Philippe Champagne</a>
+              <div class="excerpt">Closing fireside with the Minister of Finance and National Revenue — payments, RTR, financial crime, innovation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-19-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-19-new.html">Session 19 — Deep Dive: Opening Remarks (Tom Hewson)</a>
+              <div class="excerpt">Tom Hewson opens the Deep Dive track with a strategic framing of payments transformation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-20-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-20-new.html">Session 20 — Deep Dive: Remarks from ISED Canada</a>
+              <div class="excerpt">The federal innovation portfolio's perspective on Canada's payments and AI agenda.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-21-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-21-new.html">Session 21 — Deep Dive: Deploying AI in Payments — From Proof of Concept to Business Impact</a>
+              <div class="excerpt">How AI is moving from pilots into measurable, production business impact in payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-22-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-22-new.html">Session 22 — Deep Dive: Enabling AI Innovation</a>
+              <div class="excerpt">What it takes — data, talent, governance, capital — to actually enable AI innovation at scale.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-23-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-23-new.html">Session 23 — Deep Dive: From Manual to Measurable — Proving AI's Impact on Payment Transformation</a>
+              <div class="excerpt">Building the measurement discipline that turns AI promises into provable payments outcomes.</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-widgets">
+    <div>
+      <h3>FTF</h3>
+      <p>Founded by the team behind <a href="https://bankingfrontiers.com/" rel="noopener"><strong>Banking Frontiers</strong></a>, FTF is a global ecosystem of fintech mentors, enthusiasts, and innovators. Our advisory panel of bankers, investors, and tech experts connects fintech leaders across South and Southeast Asia to revolutionize financial services.</p>
+      <div class="follow">Follow Us On:</div>
+      <div class="footer-social">
+        <a class="twitter" href="#" aria-label="Twitter / X"><span>𝕏</span> twitter</a>
+        <a class="youtube" href="#" aria-label="YouTube"><span>&#9654;</span> youtube</a>
+        <a class="linkedin" href="#" aria-label="LinkedIn"><span>in</span> linkedin</a>
+      </div>
+    </div>
+    <div></div>
+    <div>
+      <ul class="footer-links">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-info">Copyright © Fintech Frontiers Live · Theme: Updated News By <a href="#">Adore Themes</a>.</div>
+</footer>
+
+</body>
+</html>

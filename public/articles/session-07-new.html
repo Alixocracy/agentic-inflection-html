@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Crypto to Core Infrastructure: Stablecoins in Canadian Payments — Session 07 — Financial Technology Frontiers</title>
+<meta name="description" content="From Crypto to Core Infrastructure: Stablecoins in Canadian Payments — Payments Canada Summit 2026 coverage by Financial Technology Frontiers.">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, "system-ui", Lato, Roboto, "Helvetica Neue", Arial, sans-serif; color: rgb(25,27,29); background:#fff; font-size:16px; line-height:1.6; }
+  a { color: rgb(25,27,29); text-decoration: none; }
+  a:hover { color: rgb(200,8,21); }
+  img { max-width: 100%; height: auto; display: block; }
+
+  .site-header { background:#f6f6f6; border-bottom:1px solid #ececec; }
+  .site-header-inner { max-width:1500px; margin:0 auto; padding:18px 20px; display:grid; grid-template-columns: minmax(260px,360px) 1fr auto; align-items:center; gap:28px; }
+  .site-logo img { max-height:78px; width:auto; }
+  .site-search { display:flex; align-items:stretch; width:100%; max-width:600px; background:transparent; border:0; border-radius:999px; box-shadow:0 0 3px 0 rgba(0,0,0,.11), 0 1.6px 3.6px 0 rgba(0,0,0,.13); }
+  .site-search input { flex:1; min-width:0; border:1px solid rgb(211,206,210); border-right:0; outline:0; padding:6px 16px; height:38px; font-size:14.4px; background:#fff; color:#3c4043; font-family:inherit; border-radius:999px 3px 3px 999px; }
+  .site-search input::placeholder { color:#80868b; opacity:1; }
+  .site-search button { background:rgb(200,8,21); color:#fff; border:0; padding:8.5px 18px; height:38px; font-size:14.24px; font-weight:400; font-family:inherit; cursor:pointer; border-radius:3px 999px 999px 3px; margin:0; min-width:96px; transition:background-color .12s ease; }
+  .site-search button:hover { background-color:rgb(170,6,18); }
+  .site-social { display:flex; gap:14px; align-items:center; color:#444; }
+  .site-social a { color:#444; font-size:18px; display:inline-flex; }
+  .site-social svg { width:20px; height:20px; }
+
+  .main-navigation { background:#fff; border-top:1px solid #ececec; border-bottom:1px solid #ececec; }
+  .main-navigation-inner { max-width:1500px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:0; }
+  .main-navigation ul.primary-menu { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; }
+  .main-navigation ul.primary-menu > li { position:relative; }
+  .main-navigation ul.primary-menu > li > a { display:inline-flex; align-items:center; gap:4px; padding:22px 18px; font-size:15px; font-weight:500; letter-spacing:0; text-transform:uppercase; color:rgb(25,27,29); border-bottom:3px solid transparent; transition:border-color .12s ease, color .12s ease; }
+  .main-navigation ul.primary-menu > li > a:hover, .main-navigation ul.primary-menu > li:hover > a { color:rgb(25,27,29); border-bottom-color:rgb(200,8,21); }
+  .main-navigation ul.primary-menu > li.has-children > a::after { content:""; display:inline-block; width:9px; height:9px; margin-left:6px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-2px); opacity:.7; }
+  .main-navigation ul.sub-menu { list-style:none; margin:0; padding:0; position:absolute; top:100%; left:0; min-width:220px; background:#fff; box-shadow:0 5px 5px 0 rgba(0,0,0,.3); z-index:50; display:none; }
+  .main-navigation ul.primary-menu > li:hover > ul.sub-menu, .main-navigation ul.primary-menu > li:focus-within > ul.sub-menu { display:block; }
+  .main-navigation ul.sub-menu li { border-bottom:1px solid rgba(32,33,36,.15); }
+  .main-navigation ul.sub-menu li:last-child { border-bottom:0; }
+  .main-navigation ul.sub-menu li a { display:block; padding:10px 15px; font-size:15.5px; font-weight:400; color:rgb(25,27,29); background:transparent; text-transform:capitalize; line-height:1.35; white-space:nowrap; transition:background-color .12s ease, color .12s ease; }
+  .main-navigation ul.sub-menu li a:hover, .main-navigation ul.sub-menu li:hover > a { background-color:rgb(200,8,21); color:#fff; }
+  .nav-right { margin-left:auto; display:flex; align-items:center; gap:14px; }
+  .nav-right .shuffle { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; color:#444; }
+  .nav-right .subscription { display:inline-flex; align-items:center; gap:8px; border:1px solid #d8d8d8; border-radius:999px; padding:8px 18px; font-weight:500; font-size:13.5px; }
+  .nav-right .subscription .bell { font-size:14px; }
+
+  .site-content { background:#fafafa; }
+  .site-content-inner { max-width:1500px; margin:0 auto; padding:36px 20px 64px; display:grid; grid-template-columns: minmax(0,1fr) 396px; gap:56px; }
+
+  .article-main { min-width:0; }
+  .entry-title { font-size:33.76px; line-height:1.2; font-weight:700; margin:0 0 14px 0; color:rgb(25,27,29); letter-spacing:-0.01em; }
+  .entry-meta { color:#666; font-size:14px; margin:0 0 18px 0; }
+  .entry-meta .byline { color:#333; font-weight:600; }
+  .entry-hero { margin:8px 0 28px 0; }
+  .entry-hero img { width:100%; border-radius:2px; }
+  .entry-content { font-size:16.5px; line-height:1.75; color:#1d1f21; }
+  .entry-content h2 { font-size:22px; font-weight:700; margin:34px 0 12px; line-height:1.3; color:rgb(25,27,29); }
+  .entry-content h3 { font-size:18px; font-weight:700; margin:26px 0 8px; }
+  .entry-content p { margin:0 0 14px 0; }
+  .entry-content strong { color:#111; }
+  .entry-content blockquote { margin:18px 0; padding:6px 18px; border-left:4px solid rgb(200,8,21); background:#fff; color:#2a2c2e; font-style:italic; }
+  .entry-content blockquote p { margin:8px 0; }
+  .entry-content ul { margin:6px 0 14px 22px; padding:0; }
+  .entry-content li { margin:4px 0; }
+  .entry-content hr { border:0; border-top:1px solid #e3e3e3; margin:28px 0; }
+  .entry-content figure { margin:28px 0; }
+  .entry-content figure img { width:100%; display:block; border-radius:2px; }
+  .entry-content figure figcaption { font-size:13.5px; color:#6a6c6e; line-height:1.5; margin-top:8px; padding-left:12px; border-left:3px solid rgb(200,8,21); font-style:italic; }
+  .entry-content .deck { font-size:18px; line-height:1.55; color:#333; font-weight:500; margin:0 0 22px 0; }
+
+  .site-sidebar { font-size:15px; }
+  .widget { margin:0 0 38px 0; }
+  .widget-title { font-size:24px; font-weight:700; margin:0 0 18px; color:rgb(25,27,29); }
+  .widget-list { list-style:none; padding:0; margin:0; }
+  .widget-list li { display:grid; grid-template-columns:84px 1fr; gap:14px; padding:14px 0; border-bottom:1px solid #e7e7e7; align-items:flex-start; }
+  .widget-list li:last-child { border-bottom:0; }
+  .widget-list .thumb { width:84px; height:84px; border-radius:2px; background-size:cover; background-position:center; background-color:#e7e7e7; }
+  .widget-list .item-body { font-size:14.5px; line-height:1.45; color:#1d1f21; }
+  .widget-list .item-body a { font-weight:600; color:#1d1f21; }
+  .widget-list .item-body a:hover { color:rgb(200,8,21); }
+  .widget-list .excerpt { color:#555; font-size:13.5px; margin-top:4px; }
+
+  .site-footer { background:rgb(28,28,28); color:#d9d9d9; }
+  .site-footer a { color:#d9d9d9; }
+  .site-footer a:hover { color:#fff; }
+  .footer-widgets { max-width:1500px; margin:0 auto; padding:60px 20px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; }
+  .footer-widgets h3 { color:#fff; font-size:22px; margin:0 0 18px; font-weight:700; }
+  .footer-widgets p { margin:0 0 14px; line-height:1.6; }
+  .footer-widgets .follow { font-weight:700; color:#fff; margin-top:24px; padding-top:14px; position:relative; }
+  .footer-widgets .follow::before { content:""; position:absolute; top:0; left:0; width:38px; height:2px; background:rgb(200,8,21); }
+  .footer-social { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .footer-social a { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:4px; font-size:13.5px; background:rgba(255,255,255,.08); }
+  .footer-social a.twitter { background:rgba(200,8,21,.85); color:#fff; }
+  .footer-links { list-style:none; padding:0; margin:0; }
+  .footer-links li { margin:0 0 12px; }
+  .site-info { border-top:1px solid rgba(255,255,255,.08); text-align:center; padding:22px 20px; font-size:13.5px; }
+
+  @media (max-width:1100px) { .site-content-inner { grid-template-columns:1fr; } .footer-widgets { grid-template-columns:1fr 1fr; } }
+  @media (max-width:760px) {
+    .site-header-inner { grid-template-columns:1fr; gap:16px; }
+    .nav-right { display:none; }
+    .main-navigation ul.primary-menu > li > a { padding:14px 10px; font-size:13px; }
+    .main-navigation ul.sub-menu { position:static; box-shadow:none; padding:0 0 0 12px; min-width:0; }
+    .main-navigation ul.sub-menu li a { padding:8px 12px; font-size:13.5px; }
+    .entry-title { font-size:27px; }
+    .footer-widgets { grid-template-columns:1fr; }
+  }
+  /* ---------- Cover Story (sidebar) ---------- */
+  .widget.coverstory-widget {
+    margin: 0 0 28px 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 6px solid rgb(200, 8, 21);
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    border-radius: 2px;
+  }
+  .widget.coverstory-widget .cs-flag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgb(200, 8, 21);
+    padding: 5px 10px;
+    border-radius: 2px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .widget.coverstory-widget .cs-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    color: rgb(25, 27, 29);
+  }
+  .widget.coverstory-widget .cs-body {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 12px;
+  }
+  .widget.coverstory-widget .cs-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: rgb(200, 8, 21);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .widget.coverstory-widget .cs-cta a:hover { color: rgb(170, 6, 18); }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://fintechfrontiers.live/" class="site-logo" aria-label="Financial Technology Frontiers">
+      <img src="https://fintechfrontiers.live/wp-content/uploads/2024/07/FTF-logo-01-e1720457608366-1.png" alt="Financial Technology Frontiers" width="343" height="101">
+    </a>
+    <form class="site-search" role="search" action="https://fintechfrontiers.live/" method="get">
+      <input type="search" name="s" placeholder="Search …" aria-label="Search">
+      <button type="submit">Search</button>
+    </form>
+    <div class="site-social" aria-label="Social">
+      <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.755l-4.71-6.18L4.94 22H2.18l6.98-7.98L2 2h6.928l4.252 5.62L18.244 2Zm-2.37 18h1.87L8.21 4H6.22l9.654 16Z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2 .6 9.4.6 9.4.6s7.4 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.2 31.2 0 0 0 .5-5.8 31.2 31.2 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.5 18V10.4H6V18h2.5Zm-1.25-8.65a1.45 1.45 0 1 0 0-2.9 1.45 1.45 0 0 0 0 2.9ZM18 18v-4.3c0-2.3-1.2-3.4-2.85-3.4-1.3 0-1.9.72-2.25 1.23V10.4H10.4v7.6h2.5v-4c0-1.07.2-2.1 1.5-2.1 1.3 0 1.3 1.2 1.3 2.17V18H18Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<nav class="main-navigation" aria-label="Primary">
+  <div class="main-navigation-inner">
+    <ul class="primary-menu">
+      <li><a href="https://fintechfrontiers.live/">Home</a></li>
+      <li class="has-children">
+        <a href="#">About</a>
+        <ul class="sub-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Meet Our Team</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offerings</a></li>
+      <li><a href="#">Advisors</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Markets &amp; Lending</a></li>
+      <li><a href="#">Insurance</a></li>
+      <li class="has-children">
+        <a href="#">Tech</a>
+        <ul class="sub-menu">
+          <li><a href="#">Fintech</a></li>
+          <li><a href="#">Regtech</a></li>
+          <li><a href="#">Insuretech</a></li>
+        </ul>
+      </li>
+      <li class="has-children">
+        <a href="#">Ecosystem</a>
+        <ul class="sub-menu">
+          <li><a href="#">Government Regulators</a></li>
+          <li><a href="#">Accelerators</a></li>
+          <li><a href="#">Associations &amp; Federations</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="shuffle" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17 3 21 7l-4 4v-3h-2.5a3 3 0 0 0-2.5 1.3l-1.5 2.2-1.3-1.9 1.2-1.7A5 5 0 0 1 14.5 6H17V3ZM3 7h3.5a5 5 0 0 1 4.1 2.2l4.3 6.2A3 3 0 0 0 17.5 17H17v3l4-4-4-4v3h.5-.5a5 5 0 0 1-4.1-2.2L8.6 6.6A3 3 0 0 0 6.1 5H3v2Zm0 10h3.5a3 3 0 0 0 2.5-1.3L10.3 14l1.3 1.9-1.2 1.7A5 5 0 0 1 6.5 19H3v-2Z"/></svg></span>
+      <span class="subscription"><span class="bell">&#128276;</span> Subscription</span>
+    </div>
+  </div>
+</nav>
+
+<div class="site-content">
+  <div class="site-content-inner">
+
+    <main class="article-main">
+      <article>
+<h1 class="entry-title">From Crypto to Core Infrastructure: Stablecoins in Canadian Payments</h1>
+        <p class="entry-meta">Session 07 · Payments Canada Summit 2026</p>
+        <p class="entry-meta"><strong>Panel</strong> &nbsp;·&nbsp; Eric Richmond (Shakepay, mod); Sereena Boparai (Paramount Commerce); Philppe Daoust (NAventures/NBC); Jay Dorey (Visa Canada)</p>
+        <p class="entry-meta byline">By <a href="https://www.linkedin.com/in/moghadam/" target="_blank" rel="noopener">Alix Moghadam</a> · Advisor, Research &amp; Content · <a href="index.html">Financial Technology Frontier</a></p>
+
+        <figure class="entry-hero">
+          <img src="images/session-07-hero.jpg" alt="From Crypto to Core Infrastructure: Stablecoins in Canadian Payments">
+        </figure>
+
+        <div class="entry-content">
+<h2>Stablecoins in Canada: A Back-End Shift With Strategic Urgency</h2>
+<p>At this Payments Canada panel, leaders from crypto, fintech, banking, and global networks aligned on a clear message: stablecoins are no longer experimental. They are becoming a foundational layer of modern payments — but in Canada, their impact will likely begin out of sight.</p>
+<p>The panel was moderated by <strong>Eric Richmond, General Counsel &amp; Head of Business Development at Shakepay</strong>, the Montreal-based crypto and fintech platform that serves over <strong>1.6 million Canadians</strong>. His opening framing set the tone: a moderator who himself works inside a regulated crypto-native fintech, anchoring a panel that spanned the rest of the Canadian payments ecosystem — a fintech infrastructure player, a major bank venture arm, and a global card network.</p>
+<h2>Sereena Boparai (Paramount Commerce) — A View From the Rails</h2>
+<p><strong>Sereena Boparai, Chief Revenue Officer at Paramount Commerce</strong>, brought the view from one of Canada's largest account-to-account payment service providers. <strong>"We are an account-to-account payment service provider… and we expect to process over $10 billion in payments this year across Canada,"</strong> she said, highlighting the scale at which traditional rails continue to operate alongside the emerging stablecoin conversation.</p>
+<p>She used that vantage point to make the panel's most concrete operational point about why stablecoins matter to existing rails: the hidden friction of treasury and timing.</p>
+<blockquote>
+<p><strong>"People are sending funds to us to facilitate their payments… and they want to sit on those funds from a treasury monitoring perspective for as long as possible."</strong></p>
+</blockquote>
+<p>To ensure transactions succeed, businesses pre-fund accounts and manually manage liquidity. "They're moving that money in advance, trying to think about clearing time and making sure that their balance is available once that payment comes around" — a process she called <strong>"a difficult thing to manage… another friction point."</strong></p>
+<p>Even with stablecoins, cost and currency friction remain. <strong>"We always have to level the USDC… we have to pivot from CAD to stablecoin,"</strong> she noted, highlighting the ongoing complexity of currency conversion for Canadian operators in practice.</p>
+<p>On the strategic side, Boparai delivered the panel's signature line on urgency:</p>
+<blockquote>
+<p><strong>"I don't think there's really any losing from the adoption. I really just think the losing is falling behind."</strong></p>
+</blockquote>
+<p>She added that <strong>"the lack of having it as an option also creates friction for us as a business within fintech in Canada"</strong> — a direct call for the Canadian policy environment to keep pace with what's already happening at the rails.</p>
+<h2>Philppe Daoust (NAventures, National Bank of Canada) — The Bank-Adjacent Innovation Model</h2>
+<p><strong>Philppe Daoust, Managing Director of Venture Capital at NAventures</strong>, the venture arm of National Bank of Canada, described a model designed to bridge incumbents and innovators: <em>"find fintechs that are closely aligned with the strategy of the bank, invest in them, and adopt them at the bank."</em> He noted that <strong>"about 90% of the companies we invested in end up being used by the bank"</strong> — a remarkable adoption rate that reflects an unusually tight integration between corporate venture and operating business.</p>
+<p>That perspective gave Daoust an unusually pragmatic read on where stablecoins will land in Canada. His framing of the early use case was the cleanest articulation of the panel:</p>
+<blockquote>
+<p><strong>"If you want to know where it's going to go first, just follow where the biggest pain is. And the biggest pain today… is cross-border payments."</strong></p>
+</blockquote>
+<p>He contrasted that with Canada's relatively well-functioning domestic rails: <strong>"We already have a system of payment in place that is well-run."</strong> The implication: do not expect stablecoins to displace domestic Canadian payment rails near-term. Expect them to compete first where Canadian rails were never the primary solution — international flows.</p>
+<p>He also offered the panel's sharpest strategic warning. If Canada moves too slowly, adoption will still happen — but outside Canada's control. The risk, in his framing, is not whether stablecoins succeed, but <strong>which currency underpins them</strong>.</p>
+<h2>Jay Dorey (Visa Canada) — The Global Network Perspective</h2>
+<p><strong>Jay Dorey, Head of Canada Government Affairs at Visa Canada</strong>, gave the discussion its global perspective and its most concrete commercial data point. He described Visa as operating at "the intersection of trusted, secure and scalable payments and money movement globally," and noted that the company is "increasingly… building, innovating and experimenting on chain."</p>
+<p>Dorey was the speaker who drew the clearest line between today's reality and Canada's near-term opportunity:</p>
+<blockquote>
+<p><strong>"I don't think that's Canada's story,"</strong></p>
+</blockquote>
+<p>he said, referring to the consumer-driven stablecoin adoption pattern seen in other markets. Instead, he pointed to back-end transformation, citing <strong>"a pilot that we're running on stablecoin settlement for some cross-border flows."</strong> And he disclosed the headline figure of the panel: <strong>Visa stablecoin settlement is already a $7 billion run-rate business.</strong></p>
+<p>His characterization of the technology fit:</p>
+<blockquote>
+<p><strong>"It really is a technology that solves those high friction, potentially high-cost areas."</strong></p>
+</blockquote>
+<p>For Dorey, the relevant Canadian question is not <em>if</em> but <em>where</em> — and he is direct that the answer is <strong>cross-border settlement first, consumer payments much later</strong>, if ever.</p>
+<h2>B2B First, Consumers Later</h2>
+<p>Across the panel — Boparai, Daoust, and Dorey, with Richmond moderating — alignment was striking. Business-to-business use cases are already gaining traction. "We do see a lot of businesses now taking on stablecoins for their day-to-day settlement," the panel observed — cross-border transactions, supplier payments, and internal treasury flows.</p>
+<p>Consumer adoption, however, remains uncertain. <strong>"For payments… it's still in its infancy,"</strong> the panel agreed, with no clear indication yet of how stablecoins will translate into everyday consumer behaviour in Canada.</p>
+<p>The immediate impact is being felt most acutely by globally operating businesses — particularly mid-sized firms managing increasing complexity. As one participant described: when companies are running international payroll, paying suppliers across borders, and trying to expand into new markets, <em>"those are becoming very difficult."</em></p>
+<h2>An Inevitable Shift — With Timing as the Key Variable</h2>
+<p>Despite differences in perspective, the panel converged on one conclusion: stablecoins are inevitable.</p>
+<p>From the crypto-native moderator's seat at Shakepay, to the account-to-account rails view at Paramount Commerce, to the bank-venture lens at NAventures, to the global network seat at Visa Canada — the ecosystem is aligning around a shared trajectory. Stablecoins are already reshaping cross-border settlement and beginning to influence treasury management.</p>
+<p><strong>For Canada, the question is not adoption — but speed. As the panel made clear, the greatest risk is not disruption, but delay.</strong></p>
+<hr />
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>Shakepay serves 1.6M+ Canadians</strong> (moderator Eric Richmond's company); <strong>Paramount Commerce expects to process $10B+ in 2026</strong> on account-to-account rails.</li>
+<li><strong>NAventures (National Bank of Canada) adopts ~90% of its fintech investments into the bank</strong> — a model worth studying for any Canadian bank-fintech relationship.</li>
+<li><strong>Visa stablecoin settlement is already a $7B run-rate business</strong> today, primarily for cross-border flows.</li>
+<li>Canada's stablecoin story is <strong>back-end first</strong> — cross-border settlement — not consumer payments. <em>"I don't think that's Canada's story"</em> — Dorey.</li>
+<li>Treasury management &amp; pre-funding remain a hidden friction even with stablecoins (Boparai's operational point).</li>
+<li>B2B adoption is happening now; consumer adoption is "in its infancy."</li>
+<li><strong>"I don't think there's really any losing from the adoption. I really just think the losing is falling behind."</strong> — Boparai.</li>
+<li>The real strategic risk is not whether stablecoins succeed in Canada — it's <strong>which currency underpins them</strong> (Daoust).</li>
+</ul>
+        </div>
+      </article>
+    </main>
+
+    <aside class="site-sidebar" aria-label="Summit Coverage">
+      
+      <section class="widget coverstory-widget">
+        <span class="cs-flag">FTF Cover Story</span>
+        <h3 class="cs-title">The Agentic Inflection</h3>
+        <p class="cs-body">How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. A cover story across all 23 sessions.</p>
+        <div class="cs-cta"><a href="index-new.html">Read the cover story &rarr;</a></div>
+      </section>
+<section class="widget">
+        <h2 class="widget-title">Summit Coverage</h2>
+        <ul class="widget-list">
+          
+          <li>
+            <div class="thumb" style="background-image:url('images/session-00-hero.png');"></div>
+            <div class="item-body">
+              <a href="session-00-new.html">Session 00 — Powering Economic Prosperity Through Payments — Susan Hawkins Opens Day One</a>
+              <div class="excerpt">Day-One opening keynote: Susan E. Hawkins on Canada's payment infrastructure as a national asset for prosperity, sovereignty, and global competitiveness.</div>
+            </div>
+          </li>
+<li>
+            <div class="thumb" style="background-image:url('images/session-01-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-01-new.html">Session 01 — Delivering Digital Prosperity for Canada</a>
+              <div class="excerpt">Opening keynote setting the agenda for Canada's payments modernization and digital prosperity.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-02-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-02-new.html">Session 02 — Outsmarting the Fraud Factories</a>
+              <div class="excerpt">How the industry is moving from reactive to predictive defences against industrial-scale fraud.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-03-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-03-new.html">Session 03 — Canada's Path to Agentic Commerce</a>
+              <div class="excerpt">Mapping the road from today's checkout to autonomous agent-led purchasing.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-04-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-04-new.html">Session 04 — Leading with AI in the New Era of Fraud and Scams</a>
+              <div class="excerpt">AI as the new frontline in fraud detection, prevention, and scam-victim protection.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-04-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-05-new.html">Session 05 — Risk-Resiliency in Payments: Building Trust and Transparency</a>
+              <div class="excerpt">Designing payment systems for resilience, trust, and transparent recovery.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-06-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-06-new.html">Session 06 — Tokenized Deposits: Bridging the Gap to Tomorrow's Digital Economy</a>
+              <div class="excerpt">Why tokenized deposits could become the rails of the next-generation digital economy.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-08-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-08-new.html">Session 08 — Economies of Machines: Tokenization for Agentic Autonomous Finance</a>
+              <div class="excerpt">Tokenization as the substrate for machine-to-machine, autonomous financial flows.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-09-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-09-new.html">Session 09 — Banking in Disguise: When Every App Becomes a Bank</a>
+              <div class="excerpt">Embedded finance is dissolving the boundary between apps and banks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-10-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-10-new.html">Session 10 — Agentic AI in Payments: The Future of Payments Is Autonomous</a>
+              <div class="excerpt">What changes when AI agents — not humans — initiate, authorize, and settle payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-11-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-11-new.html">Session 11 — The Builders of Tomorrow: How AI Is Powering the New Payments Landscape</a>
+              <div class="excerpt">The builders and platforms shaping AI-native payments stacks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-12-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-12-new.html">Session 12 — Defining the Future of Payments in Canada: The Power of Global Partnerships</a>
+              <div class="excerpt">Why Canada's payments future will be built through cross-border partnerships.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-13-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-13-new.html">Session 13 — Exchanging Ideas with Erin Elofson, President of Mastercard Canada</a>
+              <div class="excerpt">Leadership under uncertainty, responsible AI, and the role of stablecoins — with Mastercard Canada's president.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-14-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-14-new.html">Session 14 — Tokenization Isn't About Crypto. It's About Rewriting the Economics of Payments</a>
+              <div class="excerpt">Tokenization reframed as an economic-architecture story, not a crypto story.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-15-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-15-new.html">Session 15 — Converging Forces: RTR, Open Banking, Stablecoins, Agentic Commerce</a>
+              <div class="excerpt">Four forces converging — and what their intersection means for Canada.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-16-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-16-new.html">Session 16 — Delivering Canada's Real-Time Rail</a>
+              <div class="excerpt">From build to production — the operational and governance work behind RTR.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-17-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-17-new.html">Session 17 — Unlocking the Strategic Value of Payments</a>
+              <div class="excerpt">Payments as strategy, not utility: where the real economic value sits.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-18-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-18-new.html">Session 18 — Canada Strong for All: Fireside with Min. François-Philippe Champagne</a>
+              <div class="excerpt">Closing fireside with the Minister of Finance and National Revenue — payments, RTR, financial crime, innovation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-19-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-19-new.html">Session 19 — Deep Dive: Opening Remarks (Tom Hewson)</a>
+              <div class="excerpt">Tom Hewson opens the Deep Dive track with a strategic framing of payments transformation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-20-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-20-new.html">Session 20 — Deep Dive: Remarks from ISED Canada</a>
+              <div class="excerpt">The federal innovation portfolio's perspective on Canada's payments and AI agenda.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-21-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-21-new.html">Session 21 — Deep Dive: Deploying AI in Payments — From Proof of Concept to Business Impact</a>
+              <div class="excerpt">How AI is moving from pilots into measurable, production business impact in payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-22-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-22-new.html">Session 22 — Deep Dive: Enabling AI Innovation</a>
+              <div class="excerpt">What it takes — data, talent, governance, capital — to actually enable AI innovation at scale.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-23-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-23-new.html">Session 23 — Deep Dive: From Manual to Measurable — Proving AI's Impact on Payment Transformation</a>
+              <div class="excerpt">Building the measurement discipline that turns AI promises into provable payments outcomes.</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-widgets">
+    <div>
+      <h3>FTF</h3>
+      <p>Founded by the team behind <a href="https://bankingfrontiers.com/" rel="noopener"><strong>Banking Frontiers</strong></a>, FTF is a global ecosystem of fintech mentors, enthusiasts, and innovators. Our advisory panel of bankers, investors, and tech experts connects fintech leaders across South and Southeast Asia to revolutionize financial services.</p>
+      <div class="follow">Follow Us On:</div>
+      <div class="footer-social">
+        <a class="twitter" href="#" aria-label="Twitter / X"><span>𝕏</span> twitter</a>
+        <a class="youtube" href="#" aria-label="YouTube"><span>&#9654;</span> youtube</a>
+        <a class="linkedin" href="#" aria-label="LinkedIn"><span>in</span> linkedin</a>
+      </div>
+    </div>
+    <div></div>
+    <div>
+      <ul class="footer-links">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-info">Copyright © Fintech Frontiers Live · Theme: Updated News By <a href="#">Adore Themes</a>.</div>
+</footer>
+
+</body>
+</html>

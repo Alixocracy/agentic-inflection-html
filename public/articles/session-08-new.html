@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economies of Machines: Tokenization for Agentic Autonomous Finance — Session 08 — Financial Technology Frontiers</title>
+<meta name="description" content="Economies of Machines: Tokenization for Agentic Autonomous Finance — Payments Canada Summit 2026 coverage by Financial Technology Frontiers.">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, "system-ui", Lato, Roboto, "Helvetica Neue", Arial, sans-serif; color: rgb(25,27,29); background:#fff; font-size:16px; line-height:1.6; }
+  a { color: rgb(25,27,29); text-decoration: none; }
+  a:hover { color: rgb(200,8,21); }
+  img { max-width: 100%; height: auto; display: block; }
+
+  .site-header { background:#f6f6f6; border-bottom:1px solid #ececec; }
+  .site-header-inner { max-width:1500px; margin:0 auto; padding:18px 20px; display:grid; grid-template-columns: minmax(260px,360px) 1fr auto; align-items:center; gap:28px; }
+  .site-logo img { max-height:78px; width:auto; }
+  .site-search { display:flex; align-items:stretch; width:100%; max-width:600px; background:transparent; border:0; border-radius:999px; box-shadow:0 0 3px 0 rgba(0,0,0,.11), 0 1.6px 3.6px 0 rgba(0,0,0,.13); }
+  .site-search input { flex:1; min-width:0; border:1px solid rgb(211,206,210); border-right:0; outline:0; padding:6px 16px; height:38px; font-size:14.4px; background:#fff; color:#3c4043; font-family:inherit; border-radius:999px 3px 3px 999px; }
+  .site-search input::placeholder { color:#80868b; opacity:1; }
+  .site-search button { background:rgb(200,8,21); color:#fff; border:0; padding:8.5px 18px; height:38px; font-size:14.24px; font-weight:400; font-family:inherit; cursor:pointer; border-radius:3px 999px 999px 3px; margin:0; min-width:96px; transition:background-color .12s ease; }
+  .site-search button:hover { background-color:rgb(170,6,18); }
+  .site-social { display:flex; gap:14px; align-items:center; color:#444; }
+  .site-social a { color:#444; font-size:18px; display:inline-flex; }
+  .site-social svg { width:20px; height:20px; }
+
+  .main-navigation { background:#fff; border-top:1px solid #ececec; border-bottom:1px solid #ececec; }
+  .main-navigation-inner { max-width:1500px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:0; }
+  .main-navigation ul.primary-menu { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; }
+  .main-navigation ul.primary-menu > li { position:relative; }
+  .main-navigation ul.primary-menu > li > a { display:inline-flex; align-items:center; gap:4px; padding:22px 18px; font-size:15px; font-weight:500; letter-spacing:0; text-transform:uppercase; color:rgb(25,27,29); border-bottom:3px solid transparent; transition:border-color .12s ease, color .12s ease; }
+  .main-navigation ul.primary-menu > li > a:hover, .main-navigation ul.primary-menu > li:hover > a { color:rgb(25,27,29); border-bottom-color:rgb(200,8,21); }
+  .main-navigation ul.primary-menu > li.has-children > a::after { content:""; display:inline-block; width:9px; height:9px; margin-left:6px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-2px); opacity:.7; }
+  .main-navigation ul.sub-menu { list-style:none; margin:0; padding:0; position:absolute; top:100%; left:0; min-width:220px; background:#fff; box-shadow:0 5px 5px 0 rgba(0,0,0,.3); z-index:50; display:none; }
+  .main-navigation ul.primary-menu > li:hover > ul.sub-menu, .main-navigation ul.primary-menu > li:focus-within > ul.sub-menu { display:block; }
+  .main-navigation ul.sub-menu li { border-bottom:1px solid rgba(32,33,36,.15); }
+  .main-navigation ul.sub-menu li:last-child { border-bottom:0; }
+  .main-navigation ul.sub-menu li a { display:block; padding:10px 15px; font-size:15.5px; font-weight:400; color:rgb(25,27,29); background:transparent; text-transform:capitalize; line-height:1.35; white-space:nowrap; transition:background-color .12s ease, color .12s ease; }
+  .main-navigation ul.sub-menu li a:hover, .main-navigation ul.sub-menu li:hover > a { background-color:rgb(200,8,21); color:#fff; }
+  .nav-right { margin-left:auto; display:flex; align-items:center; gap:14px; }
+  .nav-right .shuffle { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; color:#444; }
+  .nav-right .subscription { display:inline-flex; align-items:center; gap:8px; border:1px solid #d8d8d8; border-radius:999px; padding:8px 18px; font-weight:500; font-size:13.5px; }
+  .nav-right .subscription .bell { font-size:14px; }
+
+  .site-content { background:#fafafa; }
+  .site-content-inner { max-width:1500px; margin:0 auto; padding:36px 20px 64px; display:grid; grid-template-columns: minmax(0,1fr) 396px; gap:56px; }
+
+  .article-main { min-width:0; }
+  .entry-title { font-size:33.76px; line-height:1.2; font-weight:700; margin:0 0 14px 0; color:rgb(25,27,29); letter-spacing:-0.01em; }
+  .entry-meta { color:#666; font-size:14px; margin:0 0 18px 0; }
+  .entry-meta .byline { color:#333; font-weight:600; }
+  .entry-hero { margin:8px 0 28px 0; }
+  .entry-hero img { width:100%; border-radius:2px; }
+  .entry-content { font-size:16.5px; line-height:1.75; color:#1d1f21; }
+  .entry-content h2 { font-size:22px; font-weight:700; margin:34px 0 12px; line-height:1.3; color:rgb(25,27,29); }
+  .entry-content h3 { font-size:18px; font-weight:700; margin:26px 0 8px; }
+  .entry-content p { margin:0 0 14px 0; }
+  .entry-content strong { color:#111; }
+  .entry-content blockquote { margin:18px 0; padding:6px 18px; border-left:4px solid rgb(200,8,21); background:#fff; color:#2a2c2e; font-style:italic; }
+  .entry-content blockquote p { margin:8px 0; }
+  .entry-content ul { margin:6px 0 14px 22px; padding:0; }
+  .entry-content li { margin:4px 0; }
+  .entry-content hr { border:0; border-top:1px solid #e3e3e3; margin:28px 0; }
+  .entry-content figure { margin:28px 0; }
+  .entry-content figure img { width:100%; display:block; border-radius:2px; }
+  .entry-content figure figcaption { font-size:13.5px; color:#6a6c6e; line-height:1.5; margin-top:8px; padding-left:12px; border-left:3px solid rgb(200,8,21); font-style:italic; }
+  .entry-content .deck { font-size:18px; line-height:1.55; color:#333; font-weight:500; margin:0 0 22px 0; }
+
+  .site-sidebar { font-size:15px; }
+  .widget { margin:0 0 38px 0; }
+  .widget-title { font-size:24px; font-weight:700; margin:0 0 18px; color:rgb(25,27,29); }
+  .widget-list { list-style:none; padding:0; margin:0; }
+  .widget-list li { display:grid; grid-template-columns:84px 1fr; gap:14px; padding:14px 0; border-bottom:1px solid #e7e7e7; align-items:flex-start; }
+  .widget-list li:last-child { border-bottom:0; }
+  .widget-list .thumb { width:84px; height:84px; border-radius:2px; background-size:cover; background-position:center; background-color:#e7e7e7; }
+  .widget-list .item-body { font-size:14.5px; line-height:1.45; color:#1d1f21; }
+  .widget-list .item-body a { font-weight:600; color:#1d1f21; }
+  .widget-list .item-body a:hover { color:rgb(200,8,21); }
+  .widget-list .excerpt { color:#555; font-size:13.5px; margin-top:4px; }
+
+  .site-footer { background:rgb(28,28,28); color:#d9d9d9; }
+  .site-footer a { color:#d9d9d9; }
+  .site-footer a:hover { color:#fff; }
+  .footer-widgets { max-width:1500px; margin:0 auto; padding:60px 20px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; }
+  .footer-widgets h3 { color:#fff; font-size:22px; margin:0 0 18px; font-weight:700; }
+  .footer-widgets p { margin:0 0 14px; line-height:1.6; }
+  .footer-widgets .follow { font-weight:700; color:#fff; margin-top:24px; padding-top:14px; position:relative; }
+  .footer-widgets .follow::before { content:""; position:absolute; top:0; left:0; width:38px; height:2px; background:rgb(200,8,21); }
+  .footer-social { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .footer-social a { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:4px; font-size:13.5px; background:rgba(255,255,255,.08); }
+  .footer-social a.twitter { background:rgba(200,8,21,.85); color:#fff; }
+  .footer-links { list-style:none; padding:0; margin:0; }
+  .footer-links li { margin:0 0 12px; }
+  .site-info { border-top:1px solid rgba(255,255,255,.08); text-align:center; padding:22px 20px; font-size:13.5px; }
+
+  @media (max-width:1100px) { .site-content-inner { grid-template-columns:1fr; } .footer-widgets { grid-template-columns:1fr 1fr; } }
+  @media (max-width:760px) {
+    .site-header-inner { grid-template-columns:1fr; gap:16px; }
+    .nav-right { display:none; }
+    .main-navigation ul.primary-menu > li > a { padding:14px 10px; font-size:13px; }
+    .main-navigation ul.sub-menu { position:static; box-shadow:none; padding:0 0 0 12px; min-width:0; }
+    .main-navigation ul.sub-menu li a { padding:8px 12px; font-size:13.5px; }
+    .entry-title { font-size:27px; }
+    .footer-widgets { grid-template-columns:1fr; }
+  }
+  /* ---------- Cover Story (sidebar) ---------- */
+  .widget.coverstory-widget {
+    margin: 0 0 28px 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 6px solid rgb(200, 8, 21);
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    border-radius: 2px;
+  }
+  .widget.coverstory-widget .cs-flag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgb(200, 8, 21);
+    padding: 5px 10px;
+    border-radius: 2px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .widget.coverstory-widget .cs-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    color: rgb(25, 27, 29);
+  }
+  .widget.coverstory-widget .cs-body {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 12px;
+  }
+  .widget.coverstory-widget .cs-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: rgb(200, 8, 21);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .widget.coverstory-widget .cs-cta a:hover { color: rgb(170, 6, 18); }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://fintechfrontiers.live/" class="site-logo" aria-label="Financial Technology Frontiers">
+      <img src="https://fintechfrontiers.live/wp-content/uploads/2024/07/FTF-logo-01-e1720457608366-1.png" alt="Financial Technology Frontiers" width="343" height="101">
+    </a>
+    <form class="site-search" role="search" action="https://fintechfrontiers.live/" method="get">
+      <input type="search" name="s" placeholder="Search …" aria-label="Search">
+      <button type="submit">Search</button>
+    </form>
+    <div class="site-social" aria-label="Social">
+      <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.755l-4.71-6.18L4.94 22H2.18l6.98-7.98L2 2h6.928l4.252 5.62L18.244 2Zm-2.37 18h1.87L8.21 4H6.22l9.654 16Z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2 .6 9.4.6 9.4.6s7.4 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.2 31.2 0 0 0 .5-5.8 31.2 31.2 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.5 18V10.4H6V18h2.5Zm-1.25-8.65a1.45 1.45 0 1 0 0-2.9 1.45 1.45 0 0 0 0 2.9ZM18 18v-4.3c0-2.3-1.2-3.4-2.85-3.4-1.3 0-1.9.72-2.25 1.23V10.4H10.4v7.6h2.5v-4c0-1.07.2-2.1 1.5-2.1 1.3 0 1.3 1.2 1.3 2.17V18H18Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<nav class="main-navigation" aria-label="Primary">
+  <div class="main-navigation-inner">
+    <ul class="primary-menu">
+      <li><a href="https://fintechfrontiers.live/">Home</a></li>
+      <li class="has-children">
+        <a href="#">About</a>
+        <ul class="sub-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Meet Our Team</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offerings</a></li>
+      <li><a href="#">Advisors</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Markets &amp; Lending</a></li>
+      <li><a href="#">Insurance</a></li>
+      <li class="has-children">
+        <a href="#">Tech</a>
+        <ul class="sub-menu">
+          <li><a href="#">Fintech</a></li>
+          <li><a href="#">Regtech</a></li>
+          <li><a href="#">Insuretech</a></li>
+        </ul>
+      </li>
+      <li class="has-children">
+        <a href="#">Ecosystem</a>
+        <ul class="sub-menu">
+          <li><a href="#">Government Regulators</a></li>
+          <li><a href="#">Accelerators</a></li>
+          <li><a href="#">Associations &amp; Federations</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="shuffle" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17 3 21 7l-4 4v-3h-2.5a3 3 0 0 0-2.5 1.3l-1.5 2.2-1.3-1.9 1.2-1.7A5 5 0 0 1 14.5 6H17V3ZM3 7h3.5a5 5 0 0 1 4.1 2.2l4.3 6.2A3 3 0 0 0 17.5 17H17v3l4-4-4-4v3h.5-.5a5 5 0 0 1-4.1-2.2L8.6 6.6A3 3 0 0 0 6.1 5H3v2Zm0 10h3.5a3 3 0 0 0 2.5-1.3L10.3 14l1.3 1.9-1.2 1.7A5 5 0 0 1 6.5 19H3v-2Z"/></svg></span>
+      <span class="subscription"><span class="bell">&#128276;</span> Subscription</span>
+    </div>
+  </div>
+</nav>
+
+<div class="site-content">
+  <div class="site-content-inner">
+
+    <main class="article-main">
+      <article>
+<h1 class="entry-title">Economies of Machines: Tokenization for Agentic Autonomous Finance</h1>
+        <p class="entry-meta">Session 08 · Payments Canada Summit 2026</p>
+        <p class="entry-meta"><strong>Panel</strong> &nbsp;·&nbsp; Michelle Beyo (Finavator, mod); Aviva Klein (Independent); Nate Soffio (Prove); David Tax (TD); Mike Ward (Mica)</p>
+        <p class="entry-meta byline">By <a href="https://www.linkedin.com/in/moghadam/" target="_blank" rel="noopener">Alix Moghadam</a> · Advisor, Research &amp; Content · <a href="index.html">Financial Technology Frontier</a></p>
+
+        <figure class="entry-hero">
+          <img src="images/session-08-hero.jpg" alt="Economies of Machines: Tokenization for Agentic Autonomous Finance">
+        </figure>
+
+        <div class="entry-content">
+<h2>Agentic Finance Takes Shape — But Trust, Identity, and Control Remain Unresolved</h2>
+<p>At this year's Payments Canada Summit, a panel of industry leaders — moderated by <strong>Michelle Beyo of Finavator</strong> — gathered to unpack one of the most rapidly evolving topics in financial services: agentic autonomous finance. Beyo framed the space as one moving at extraordinary speed — <em>"in the last six weeks alone, the amount of updates and news across the ecosystem… there's just so much to take in"</em> — and set the panel up to separate what is real from what remains aspirational.</p>
+<p>The central tension was clear from the outset: while the potential is enormous, the foundational elements required to make agent-driven commerce safe, trusted, and scalable are still being built.</p>
+<h2>A System Moving Faster Than Its Foundations</h2>
+<p><strong>Nate Soffio of Prove</strong>, working at the intersection of identity and standards, pointed to an unusual signal of momentum: <strong>"contributors to the standards bodies and working groups are moving way faster than I've seen them move before."</strong> He noted that collaboration is now happening across payment rails, identity providers, and internet infrastructure companies, adding that <em>"we can't just kind of transpose one-to-one human frameworks for trust onto agents."</em></p>
+<p>Yet, as <strong>Aviva Klein, Independent Consultant</strong>, observed, real-world adoption remains limited. <em>"I'm not seeing a lot, that's for sure,"</em> she said, noting that most activity today is concentrated in enterprise workflows, particularly in the <strong>"procure-to-pay cycle,"</strong> where agents are automating processes rather than executing fully autonomous consumer transactions.</p>
+<p>From a banking perspective, <strong>David Tax of TD Bank Group</strong> reinforced that the industry is not yet ready to scale. <strong>"We're still in a 'not yet,'"</strong> he said. <strong>"Trust is hard to gain and easily lost… that experience is going to be too uneven for people to really scale yet."</strong></p>
+<h2>Trust Begins With Simplicity — But Breaks Quickly</h2>
+<p>Despite this caution, early experimentation is already exposing real-world challenges. Tax shared an internal example: <strong>"one of our executives… said to herself, 'I'm going to buy a case of cold-pressed juice.' And 10 cases showed up at her door."</strong> The takeaway, he explained, is that <em>"the challenges are not theoretical. The challenges are real."</em></p>
+<p><strong>Mike Ward of Mica</strong>, approaching the problem from an infrastructure perspective, expects adoption to begin with low-risk use cases. <strong>"I'm probably not going to give it a permission for a $5,000 summer vacation,"</strong> he said, <strong>"but to make sure that there's toilet paper on the front doorstep tomorrow morning… I believe that type of transaction will start happening quite quickly."</strong></p>
+<p>This gradual adoption path was echoed across the panel: agentic commerce will start with tightly defined, low-risk actions before expanding into broader, more autonomous decision-making.</p>
+<h2>Identity: The Missing Piece in Every Protocol</h2>
+<p>While payment rails and agent capabilities continue to evolve, <strong>Soffio</strong> identified a fundamental gap: identity. Referring to emerging frameworks like Visa TAP and Mastercard's verifiable intent initiatives, he noted that <strong>"they all kind of have an identity-shaped hole."</strong></p>
+<p>The challenge, he explained, is not just verifying a user, but binding that identity to an agent and its actions. <strong>"How do we… cryptographically bind an identity to a specific agent or agent runtime or a specific task or a specific chain of events?"</strong></p>
+<p>This introduces a deeper architectural shift. In agent-driven interactions, he argued, traditional assumptions no longer hold. <strong>"Everyone's got to authenticate with everyone else. It's just a big authentication party,"</strong> he said, reflecting a world where multiple intermediaries — agents, platforms, and merchants — interact simultaneously.</p>
+<h2>Consent Is No Longer a One-Time Event</h2>
+<p>If identity is unresolved, consent is even more complex. <strong>Klein</strong> emphasized that existing models are insufficient for autonomous systems. <strong>"Consent is going to be super important and not just one time, but continuously throughout the mandate of the agent,"</strong> she said.</p>
+<p>The risk lies in how agents operate. <em>"Agents… just want to please us… and they will uncover every single stone in order to please its user."</em> Over time, this can lead to drift, where <em>"what you consented for originally is actually not necessarily what the agent is even doing anymore."</em></p>
+<p>To manage this, she pointed to the need for new control mechanisms: <strong>"the audit trail is going to be super, super important… not just what, but why did the agent do it."</strong> She also highlighted revocability and human intervention, noting that "the ability for the human to stop" and "having the human in the loop" will remain critical as mandates expand.</p>
+<h2>Payments: Evolution, Not Replacement</h2>
+<p>On the question of payment methods, the panel agreed that existing rails will not disappear overnight. <strong>Tax</strong> explained that <em>"existing rails are largely going to persist,"</em> with card networks adapting their existing trust frameworks to this new environment.</p>
+<p>At the same time, new models are emerging. <em>"Tokenized deposits… stablecoins… the pieces are coming together,"</em> he said, particularly for use cases like micropayments. However, he raised a deeper question: <strong>"does the programmability matter as much if the agents themselves can be the programmer?"</strong></p>
+<p>This shift suggests that agents may become the primary layer of logic, while payment systems focus on speed, cost, and settlement.</p>
+<h2>Who Do Users Actually Trust?</h2>
+<p>One of the most debated questions was who will ultimately own the relationship with the user. <strong>Beyo</strong>, moderating, raised a concern shared by many: <em>"I don't know that I trust the LLM to be my agent… what trust have they built with me so far?"</em></p>
+<p><strong>Soffio</strong> responded by reframing the concept entirely. <strong>"It may be easier to think about an agent as sort of a container for stuff,"</strong> he said, rather than a trusted entity in itself.</p>
+<p><strong>Tax</strong>, meanwhile, pointed to user behaviour. <strong>"Where trust starts to go for the average person… is a brand that they've heard of,"</strong> he said, noting that familiarity may drive early adoption. Over time, however, <em>"what makes it work better is going to be who knows you the best."</em></p>
+<p>He also raised the possibility of a more decentralized future, where users carry their own data. Referencing earlier ideas about data ownership, he suggested that <em>"you actually do have your data… and… you should be able to bring all of that context with you to that other provider."</em></p>
+<h2>Merchants Face a New Visibility Problem</h2>
+<p>From the merchant perspective, a new issue is emerging: visibility. As <strong>Tax</strong> explained, <strong>"merchants have no easy way to detect"</strong> whether a transaction is initiated by a human or an agent.</p>
+<p>Without that clarity, defensive behaviour is likely. <em>"You're going to put those blocks in place,"</em> he said, particularly if agent-driven traffic appears risky or low quality.</p>
+<p>This creates a need for new identity signals within transactions, ensuring that <em>"this is real traffic that looks well."</em> In the absence of such signals, friction may increase rather than decrease.</p>
+<h2>Banks as the Potential Trust Anchor</h2>
+<p><strong>Ward</strong> argued that traditional financial institutions still have a critical role to play. <em>"If something was not right… who would I call?"</em> he asked. He pointed out that the entity the consumer trusts most is <em>"their financial institution."</em> As a result, he believes banks should take a more active role in agentic systems, particularly in authorization, monitoring, and dispute handling.</p>
+<h2>Canada's Opportunity — and Constraint</h2>
+<p>The discussion also turned to Canada's position in this emerging landscape. While the country lacks a dominant LLM ecosystem, panelists saw structural advantages.</p>
+<p><strong>Klein</strong> argued that <strong>"I don't think Canada needs its own LLM,"</strong> emphasizing instead the importance of privacy and safe data handling. <strong>Tax</strong> added that Canadian privacy laws are relatively strong, though he warned of the risk of <em>"privacy compliance hell"</em> if those frameworks are not adapted to agent-driven interactions.</p>
+<p><strong>Ward</strong>, by contrast, highlighted Canada's more concentrated financial ecosystem as a potential advantage. <strong>"Your ability to get good standards… tested and controlled… is not like a lot of places,"</strong> he said.</p>
+<h2>The Real Challenge Ahead</h2>
+<p>In his closing remarks, <strong>Tax</strong> offered a perspective that resonated across the discussion. <strong>"AI is the easy part,"</strong> he said. The real challenge lies in building the systems around it — the controls, governance, and infrastructure required to support a world of autonomous agents.</p>
+<p>He also warned that the industry may be underestimating what lies ahead. <strong>"We're not ready for the volume and speed with which things are going to go,"</strong> he said, adding that <em>"we are underestimating the amount of controls we need to put into place."</em></p>
+<h2>Conclusion</h2>
+<p>The panel made one thing clear: agentic autonomous finance is no longer theoretical. Early use cases are emerging, and the pace of innovation is accelerating rapidly. Yet the foundational layers — identity, consent, trust, and control — remain unresolved.</p>
+<p>As <strong>Beyo</strong> concluded, the path forward will require coordination across the entire ecosystem. <em>"We all need to work together to get there properly,"</em> she said, <em>"to ensure consumers are protected and getting the innovation part of this whole ecosystem play."</em></p>
+<p>The opportunity is significant — but so is the complexity.</p>
+<hr />
+<h2>Key Takeaways</h2>
+<ul>
+<li>Standards bodies are moving faster than ever — but real-world adoption is mostly enterprise procure-to-pay.</li>
+<li>The "cold-pressed juice" anecdote: an executive asked for one case, <strong>10 cases showed up.</strong> Failure modes are real.</li>
+<li>Adoption will start with low-stakes recurring purchases (toilet paper), not $5,000 vacations.</li>
+<li>Every emerging agentic protocol has an <strong>"identity-shaped hole."</strong> Binding identity to agent + task is unsolved.</li>
+<li>Consent must be continuous, with revocability, audit trails answering <em>why</em> (not just <em>what</em>), and human-in-the-loop.</li>
+<li>Merchants currently have <strong>no way to detect human vs. agent traffic</strong> — risks of defensive blocking.</li>
+<li>Canada doesn't need its own LLM, but its concentrated banking system may give it a standards advantage.</li>
+<li>"AI is the easy part" — the hard part is controls, governance, and trust infrastructure.</li>
+</ul>
+        </div>
+      </article>
+    </main>
+
+    <aside class="site-sidebar" aria-label="Summit Coverage">
+      
+      <section class="widget coverstory-widget">
+        <span class="cs-flag">FTF Cover Story</span>
+        <h3 class="cs-title">The Agentic Inflection</h3>
+        <p class="cs-body">How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. A cover story across all 23 sessions.</p>
+        <div class="cs-cta"><a href="index-new.html">Read the cover story &rarr;</a></div>
+      </section>
+<section class="widget">
+        <h2 class="widget-title">Summit Coverage</h2>
+        <ul class="widget-list">
+          
+          <li>
+            <div class="thumb" style="background-image:url('images/session-00-hero.png');"></div>
+            <div class="item-body">
+              <a href="session-00-new.html">Session 00 — Powering Economic Prosperity Through Payments — Susan Hawkins Opens Day One</a>
+              <div class="excerpt">Day-One opening keynote: Susan E. Hawkins on Canada's payment infrastructure as a national asset for prosperity, sovereignty, and global competitiveness.</div>
+            </div>
+          </li>
+<li>
+            <div class="thumb" style="background-image:url('images/session-01-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-01-new.html">Session 01 — Delivering Digital Prosperity for Canada</a>
+              <div class="excerpt">Opening keynote setting the agenda for Canada's payments modernization and digital prosperity.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-02-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-02-new.html">Session 02 — Outsmarting the Fraud Factories</a>
+              <div class="excerpt">How the industry is moving from reactive to predictive defences against industrial-scale fraud.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-03-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-03-new.html">Session 03 — Canada's Path to Agentic Commerce</a>
+              <div class="excerpt">Mapping the road from today's checkout to autonomous agent-led purchasing.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-04-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-04-new.html">Session 04 — Leading with AI in the New Era of Fraud and Scams</a>
+              <div class="excerpt">AI as the new frontline in fraud detection, prevention, and scam-victim protection.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-04-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-05-new.html">Session 05 — Risk-Resiliency in Payments: Building Trust and Transparency</a>
+              <div class="excerpt">Designing payment systems for resilience, trust, and transparent recovery.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-06-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-06-new.html">Session 06 — Tokenized Deposits: Bridging the Gap to Tomorrow's Digital Economy</a>
+              <div class="excerpt">Why tokenized deposits could become the rails of the next-generation digital economy.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-07-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-07-new.html">Session 07 — From Crypto to Core Infrastructure: Stablecoins in Canadian Payments</a>
+              <div class="excerpt">Stablecoins reframed from a crypto story into core Canadian payments infrastructure.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-09-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-09-new.html">Session 09 — Banking in Disguise: When Every App Becomes a Bank</a>
+              <div class="excerpt">Embedded finance is dissolving the boundary between apps and banks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-10-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-10-new.html">Session 10 — Agentic AI in Payments: The Future of Payments Is Autonomous</a>
+              <div class="excerpt">What changes when AI agents — not humans — initiate, authorize, and settle payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-11-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-11-new.html">Session 11 — The Builders of Tomorrow: How AI Is Powering the New Payments Landscape</a>
+              <div class="excerpt">The builders and platforms shaping AI-native payments stacks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-12-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-12-new.html">Session 12 — Defining the Future of Payments in Canada: The Power of Global Partnerships</a>
+              <div class="excerpt">Why Canada's payments future will be built through cross-border partnerships.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-13-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-13-new.html">Session 13 — Exchanging Ideas with Erin Elofson, President of Mastercard Canada</a>
+              <div class="excerpt">Leadership under uncertainty, responsible AI, and the role of stablecoins — with Mastercard Canada's president.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-14-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-14-new.html">Session 14 — Tokenization Isn't About Crypto. It's About Rewriting the Economics of Payments</a>
+              <div class="excerpt">Tokenization reframed as an economic-architecture story, not a crypto story.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-15-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-15-new.html">Session 15 — Converging Forces: RTR, Open Banking, Stablecoins, Agentic Commerce</a>
+              <div class="excerpt">Four forces converging — and what their intersection means for Canada.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-16-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-16-new.html">Session 16 — Delivering Canada's Real-Time Rail</a>
+              <div class="excerpt">From build to production — the operational and governance work behind RTR.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-17-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-17-new.html">Session 17 — Unlocking the Strategic Value of Payments</a>
+              <div class="excerpt">Payments as strategy, not utility: where the real economic value sits.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-18-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-18-new.html">Session 18 — Canada Strong for All: Fireside with Min. François-Philippe Champagne</a>
+              <div class="excerpt">Closing fireside with the Minister of Finance and National Revenue — payments, RTR, financial crime, innovation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-19-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-19-new.html">Session 19 — Deep Dive: Opening Remarks (Tom Hewson)</a>
+              <div class="excerpt">Tom Hewson opens the Deep Dive track with a strategic framing of payments transformation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-20-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-20-new.html">Session 20 — Deep Dive: Remarks from ISED Canada</a>
+              <div class="excerpt">The federal innovation portfolio's perspective on Canada's payments and AI agenda.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-21-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-21-new.html">Session 21 — Deep Dive: Deploying AI in Payments — From Proof of Concept to Business Impact</a>
+              <div class="excerpt">How AI is moving from pilots into measurable, production business impact in payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-22-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-22-new.html">Session 22 — Deep Dive: Enabling AI Innovation</a>
+              <div class="excerpt">What it takes — data, talent, governance, capital — to actually enable AI innovation at scale.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-23-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-23-new.html">Session 23 — Deep Dive: From Manual to Measurable — Proving AI's Impact on Payment Transformation</a>
+              <div class="excerpt">Building the measurement discipline that turns AI promises into provable payments outcomes.</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-widgets">
+    <div>
+      <h3>FTF</h3>
+      <p>Founded by the team behind <a href="https://bankingfrontiers.com/" rel="noopener"><strong>Banking Frontiers</strong></a>, FTF is a global ecosystem of fintech mentors, enthusiasts, and innovators. Our advisory panel of bankers, investors, and tech experts connects fintech leaders across South and Southeast Asia to revolutionize financial services.</p>
+      <div class="follow">Follow Us On:</div>
+      <div class="footer-social">
+        <a class="twitter" href="#" aria-label="Twitter / X"><span>𝕏</span> twitter</a>
+        <a class="youtube" href="#" aria-label="YouTube"><span>&#9654;</span> youtube</a>
+        <a class="linkedin" href="#" aria-label="LinkedIn"><span>in</span> linkedin</a>
+      </div>
+    </div>
+    <div></div>
+    <div>
+      <ul class="footer-links">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-info">Copyright © Fintech Frontiers Live · Theme: Updated News By <a href="#">Adore Themes</a>.</div>
+</footer>
+
+</body>
+</html>

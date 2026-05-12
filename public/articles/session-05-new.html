@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risk-Resiliency in Payments: Building Trust and Transparency — Session 05 — Financial Technology Frontiers</title>
+<meta name="description" content="Risk-Resiliency in Payments: Building Trust and Transparency — Payments Canada Summit 2026 coverage by Financial Technology Frontiers.">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, "system-ui", Lato, Roboto, "Helvetica Neue", Arial, sans-serif; color: rgb(25,27,29); background:#fff; font-size:16px; line-height:1.6; }
+  a { color: rgb(25,27,29); text-decoration: none; }
+  a:hover { color: rgb(200,8,21); }
+  img { max-width: 100%; height: auto; display: block; }
+
+  .site-header { background:#f6f6f6; border-bottom:1px solid #ececec; }
+  .site-header-inner { max-width:1500px; margin:0 auto; padding:18px 20px; display:grid; grid-template-columns: minmax(260px,360px) 1fr auto; align-items:center; gap:28px; }
+  .site-logo img { max-height:78px; width:auto; }
+  .site-search { display:flex; align-items:stretch; width:100%; max-width:600px; background:transparent; border:0; border-radius:999px; box-shadow:0 0 3px 0 rgba(0,0,0,.11), 0 1.6px 3.6px 0 rgba(0,0,0,.13); }
+  .site-search input { flex:1; min-width:0; border:1px solid rgb(211,206,210); border-right:0; outline:0; padding:6px 16px; height:38px; font-size:14.4px; background:#fff; color:#3c4043; font-family:inherit; border-radius:999px 3px 3px 999px; }
+  .site-search input::placeholder { color:#80868b; opacity:1; }
+  .site-search button { background:rgb(200,8,21); color:#fff; border:0; padding:8.5px 18px; height:38px; font-size:14.24px; font-weight:400; font-family:inherit; cursor:pointer; border-radius:3px 999px 999px 3px; margin:0; min-width:96px; transition:background-color .12s ease; }
+  .site-search button:hover { background-color:rgb(170,6,18); }
+  .site-social { display:flex; gap:14px; align-items:center; color:#444; }
+  .site-social a { color:#444; font-size:18px; display:inline-flex; }
+  .site-social svg { width:20px; height:20px; }
+
+  .main-navigation { background:#fff; border-top:1px solid #ececec; border-bottom:1px solid #ececec; }
+  .main-navigation-inner { max-width:1500px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:0; }
+  .main-navigation ul.primary-menu { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; }
+  .main-navigation ul.primary-menu > li { position:relative; }
+  .main-navigation ul.primary-menu > li > a { display:inline-flex; align-items:center; gap:4px; padding:22px 18px; font-size:15px; font-weight:500; letter-spacing:0; text-transform:uppercase; color:rgb(25,27,29); border-bottom:3px solid transparent; transition:border-color .12s ease, color .12s ease; }
+  .main-navigation ul.primary-menu > li > a:hover, .main-navigation ul.primary-menu > li:hover > a { color:rgb(25,27,29); border-bottom-color:rgb(200,8,21); }
+  .main-navigation ul.primary-menu > li.has-children > a::after { content:""; display:inline-block; width:9px; height:9px; margin-left:6px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-2px); opacity:.7; }
+  .main-navigation ul.sub-menu { list-style:none; margin:0; padding:0; position:absolute; top:100%; left:0; min-width:220px; background:#fff; box-shadow:0 5px 5px 0 rgba(0,0,0,.3); z-index:50; display:none; }
+  .main-navigation ul.primary-menu > li:hover > ul.sub-menu, .main-navigation ul.primary-menu > li:focus-within > ul.sub-menu { display:block; }
+  .main-navigation ul.sub-menu li { border-bottom:1px solid rgba(32,33,36,.15); }
+  .main-navigation ul.sub-menu li:last-child { border-bottom:0; }
+  .main-navigation ul.sub-menu li a { display:block; padding:10px 15px; font-size:15.5px; font-weight:400; color:rgb(25,27,29); background:transparent; text-transform:capitalize; line-height:1.35; white-space:nowrap; transition:background-color .12s ease, color .12s ease; }
+  .main-navigation ul.sub-menu li a:hover, .main-navigation ul.sub-menu li:hover > a { background-color:rgb(200,8,21); color:#fff; }
+  .nav-right { margin-left:auto; display:flex; align-items:center; gap:14px; }
+  .nav-right .shuffle { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; color:#444; }
+  .nav-right .subscription { display:inline-flex; align-items:center; gap:8px; border:1px solid #d8d8d8; border-radius:999px; padding:8px 18px; font-weight:500; font-size:13.5px; }
+  .nav-right .subscription .bell { font-size:14px; }
+
+  .site-content { background:#fafafa; }
+  .site-content-inner { max-width:1500px; margin:0 auto; padding:36px 20px 64px; display:grid; grid-template-columns: minmax(0,1fr) 396px; gap:56px; }
+
+  .article-main { min-width:0; }
+  .entry-title { font-size:33.76px; line-height:1.2; font-weight:700; margin:0 0 14px 0; color:rgb(25,27,29); letter-spacing:-0.01em; }
+  .entry-meta { color:#666; font-size:14px; margin:0 0 18px 0; }
+  .entry-meta .byline { color:#333; font-weight:600; }
+  .entry-hero { margin:8px 0 28px 0; }
+  .entry-hero img { width:100%; border-radius:2px; }
+  .entry-content { font-size:16.5px; line-height:1.75; color:#1d1f21; }
+  .entry-content h2 { font-size:22px; font-weight:700; margin:34px 0 12px; line-height:1.3; color:rgb(25,27,29); }
+  .entry-content h3 { font-size:18px; font-weight:700; margin:26px 0 8px; }
+  .entry-content p { margin:0 0 14px 0; }
+  .entry-content strong { color:#111; }
+  .entry-content blockquote { margin:18px 0; padding:6px 18px; border-left:4px solid rgb(200,8,21); background:#fff; color:#2a2c2e; font-style:italic; }
+  .entry-content blockquote p { margin:8px 0; }
+  .entry-content ul { margin:6px 0 14px 22px; padding:0; }
+  .entry-content li { margin:4px 0; }
+  .entry-content hr { border:0; border-top:1px solid #e3e3e3; margin:28px 0; }
+  .entry-content figure { margin:28px 0; }
+  .entry-content figure img { width:100%; display:block; border-radius:2px; }
+  .entry-content figure figcaption { font-size:13.5px; color:#6a6c6e; line-height:1.5; margin-top:8px; padding-left:12px; border-left:3px solid rgb(200,8,21); font-style:italic; }
+  .entry-content .deck { font-size:18px; line-height:1.55; color:#333; font-weight:500; margin:0 0 22px 0; }
+
+  .site-sidebar { font-size:15px; }
+  .widget { margin:0 0 38px 0; }
+  .widget-title { font-size:24px; font-weight:700; margin:0 0 18px; color:rgb(25,27,29); }
+  .widget-list { list-style:none; padding:0; margin:0; }
+  .widget-list li { display:grid; grid-template-columns:84px 1fr; gap:14px; padding:14px 0; border-bottom:1px solid #e7e7e7; align-items:flex-start; }
+  .widget-list li:last-child { border-bottom:0; }
+  .widget-list .thumb { width:84px; height:84px; border-radius:2px; background-size:cover; background-position:center; background-color:#e7e7e7; }
+  .widget-list .item-body { font-size:14.5px; line-height:1.45; color:#1d1f21; }
+  .widget-list .item-body a { font-weight:600; color:#1d1f21; }
+  .widget-list .item-body a:hover { color:rgb(200,8,21); }
+  .widget-list .excerpt { color:#555; font-size:13.5px; margin-top:4px; }
+
+  .site-footer { background:rgb(28,28,28); color:#d9d9d9; }
+  .site-footer a { color:#d9d9d9; }
+  .site-footer a:hover { color:#fff; }
+  .footer-widgets { max-width:1500px; margin:0 auto; padding:60px 20px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; }
+  .footer-widgets h3 { color:#fff; font-size:22px; margin:0 0 18px; font-weight:700; }
+  .footer-widgets p { margin:0 0 14px; line-height:1.6; }
+  .footer-widgets .follow { font-weight:700; color:#fff; margin-top:24px; padding-top:14px; position:relative; }
+  .footer-widgets .follow::before { content:""; position:absolute; top:0; left:0; width:38px; height:2px; background:rgb(200,8,21); }
+  .footer-social { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .footer-social a { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:4px; font-size:13.5px; background:rgba(255,255,255,.08); }
+  .footer-social a.twitter { background:rgba(200,8,21,.85); color:#fff; }
+  .footer-links { list-style:none; padding:0; margin:0; }
+  .footer-links li { margin:0 0 12px; }
+  .site-info { border-top:1px solid rgba(255,255,255,.08); text-align:center; padding:22px 20px; font-size:13.5px; }
+
+  @media (max-width:1100px) { .site-content-inner { grid-template-columns:1fr; } .footer-widgets { grid-template-columns:1fr 1fr; } }
+  @media (max-width:760px) {
+    .site-header-inner { grid-template-columns:1fr; gap:16px; }
+    .nav-right { display:none; }
+    .main-navigation ul.primary-menu > li > a { padding:14px 10px; font-size:13px; }
+    .main-navigation ul.sub-menu { position:static; box-shadow:none; padding:0 0 0 12px; min-width:0; }
+    .main-navigation ul.sub-menu li a { padding:8px 12px; font-size:13.5px; }
+    .entry-title { font-size:27px; }
+    .footer-widgets { grid-template-columns:1fr; }
+  }
+  /* ---------- Cover Story (sidebar) ---------- */
+  .widget.coverstory-widget {
+    margin: 0 0 28px 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 6px solid rgb(200, 8, 21);
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    border-radius: 2px;
+  }
+  .widget.coverstory-widget .cs-flag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgb(200, 8, 21);
+    padding: 5px 10px;
+    border-radius: 2px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .widget.coverstory-widget .cs-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    color: rgb(25, 27, 29);
+  }
+  .widget.coverstory-widget .cs-body {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 12px;
+  }
+  .widget.coverstory-widget .cs-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: rgb(200, 8, 21);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .widget.coverstory-widget .cs-cta a:hover { color: rgb(170, 6, 18); }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://fintechfrontiers.live/" class="site-logo" aria-label="Financial Technology Frontiers">
+      <img src="https://fintechfrontiers.live/wp-content/uploads/2024/07/FTF-logo-01-e1720457608366-1.png" alt="Financial Technology Frontiers" width="343" height="101">
+    </a>
+    <form class="site-search" role="search" action="https://fintechfrontiers.live/" method="get">
+      <input type="search" name="s" placeholder="Search …" aria-label="Search">
+      <button type="submit">Search</button>
+    </form>
+    <div class="site-social" aria-label="Social">
+      <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.52 7.45L22 22h-6.755l-4.71-6.18L4.94 22H2.18l6.98-7.98L2 2h6.928l4.252 5.62L18.244 2Zm-2.37 18h1.87L8.21 4H6.22l9.654 16Z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c2 .6 9.4.6 9.4.6s7.4 0 9.4-.6a3 3 0 0 0 2.1-2.1 31.2 31.2 0 0 0 .5-5.8 31.2 31.2 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.5 18V10.4H6V18h2.5Zm-1.25-8.65a1.45 1.45 0 1 0 0-2.9 1.45 1.45 0 0 0 0 2.9ZM18 18v-4.3c0-2.3-1.2-3.4-2.85-3.4-1.3 0-1.9.72-2.25 1.23V10.4H10.4v7.6h2.5v-4c0-1.07.2-2.1 1.5-2.1 1.3 0 1.3 1.2 1.3 2.17V18H18Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<nav class="main-navigation" aria-label="Primary">
+  <div class="main-navigation-inner">
+    <ul class="primary-menu">
+      <li><a href="https://fintechfrontiers.live/">Home</a></li>
+      <li class="has-children">
+        <a href="#">About</a>
+        <ul class="sub-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Meet Our Team</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offerings</a></li>
+      <li><a href="#">Advisors</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Markets &amp; Lending</a></li>
+      <li><a href="#">Insurance</a></li>
+      <li class="has-children">
+        <a href="#">Tech</a>
+        <ul class="sub-menu">
+          <li><a href="#">Fintech</a></li>
+          <li><a href="#">Regtech</a></li>
+          <li><a href="#">Insuretech</a></li>
+        </ul>
+      </li>
+      <li class="has-children">
+        <a href="#">Ecosystem</a>
+        <ul class="sub-menu">
+          <li><a href="#">Government Regulators</a></li>
+          <li><a href="#">Accelerators</a></li>
+          <li><a href="#">Associations &amp; Federations</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="shuffle" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17 3 21 7l-4 4v-3h-2.5a3 3 0 0 0-2.5 1.3l-1.5 2.2-1.3-1.9 1.2-1.7A5 5 0 0 1 14.5 6H17V3ZM3 7h3.5a5 5 0 0 1 4.1 2.2l4.3 6.2A3 3 0 0 0 17.5 17H17v3l4-4-4-4v3h.5-.5a5 5 0 0 1-4.1-2.2L8.6 6.6A3 3 0 0 0 6.1 5H3v2Zm0 10h3.5a3 3 0 0 0 2.5-1.3L10.3 14l1.3 1.9-1.2 1.7A5 5 0 0 1 6.5 19H3v-2Z"/></svg></span>
+      <span class="subscription"><span class="bell">&#128276;</span> Subscription</span>
+    </div>
+  </div>
+</nav>
+
+<div class="site-content">
+  <div class="site-content-inner">
+
+    <main class="article-main">
+      <article>
+<h1 class="entry-title">Risk-Resiliency in Payments: Building Trust and Transparency</h1>
+        <p class="entry-meta">Session 05 · Payments Canada Summit 2026</p>
+        <p class="entry-meta"><strong>Panel</strong> &nbsp;·&nbsp; Lisa Ford (mod, Payments Canada); Andy Renshaw (Feedzai); Paulo Barbosa (Banfico); Anne Butler (Bank of Canada); Judith Hamel (Finance Canada)</p>
+        <p class="entry-meta byline">By <a href="https://www.linkedin.com/in/moghadam/" target="_blank" rel="noopener">Alix Moghadam</a> · Advisor, Research &amp; Content · <a href="index.html">Financial Technology Frontier</a></p>
+
+        <figure class="entry-hero">
+          <img src="images/session-04-hero.jpg" alt="Risk-Resiliency in Payments: Building Trust and Transparency">
+        </figure>
+
+        <div class="entry-content">
+<h2>AI, Trust, and Collaboration: Rethinking Fraud Prevention in the Age of Open Payments</h2>
+<p>At the Payments Canada Summit, this panel — moderated by <strong>Lisa Ford, CLPO of Payments Canada</strong> — brought together perspectives from across the financial-crime stack: a global anti-fraud AI vendor (<strong>Feedzai</strong>), an open banking infrastructure provider (<strong>Banfico</strong>), Canada's central bank supervisory function (<strong>Bank of Canada</strong>), and the federal policy lead (<strong>Finance Canada</strong>). The discussion explored how artificial intelligence, data collaboration, and trust frameworks are reshaping financial crime prevention and the future of payments — and how regulation, supervision, and industry standards must move in lockstep to enable the next era of open finance and agentic transactions.</p>
+<p>The panel composition itself was deliberate: a <strong>supervisor</strong>, a <strong>policy lead</strong>, a <strong>detection vendor</strong>, a <strong>trust-infrastructure operator</strong>, and a <strong>moderator from the rail itself</strong> — all in the same conversation. Lisa Ford framed the closing question in a line that captures the panel's intent: <em>"how we all strive to bridge the gap between rapid speed and systemic safety."</em> It is a question no single seat on the panel could answer alone.</p>
+<h2>Andy Renshaw, SVP Product Management, Feedzai — AI Works, Collaboration Multiplies It</h2>
+<p><strong>Andy Renshaw of Feedzai</strong> opened with a pragmatic view on the current state of AI in financial crime. <strong>"Does it work? Does it make a difference? And the answer is yes,"</strong> he said, noting that most institutions are already seeing <strong>"a 25 to kind of 35% improvement in the financial crime prevention."</strong> But the real breakthrough comes when institutions move beyond isolated deployments. <strong>"When you move into collaborative or network mode, you can probably add another 50% to that again,"</strong> he explained, pushing the figure to roughly 40–45%. "Collaboration is vital and data is vital within that AI context."</p>
+<p>Renshaw also drew a distinction that matters for any executive deploying AI inside a regulated environment. <strong>"As consumers, we're all kind of AI native now. The AI in business and financial crime prevention is not quite the same thing."</strong> Enterprise-grade AI in financial services, he stressed, has to be engineered for explainability, governance, and operational scale — and that is materially different from the consumer-grade chat experiences shaping public perception.</p>
+<p>Drawing on his international experience (Feedzai is headquartered with significant operations in the UK), Renshaw highlighted how different jurisdictions are operationalizing AI in financial crime in materially different ways:</p>
+<ul>
+<li><strong>United Kingdom:</strong> Confirmation of Payee and the split-liability model. Whatever one's view on whether split liability is the right policy, <em>"having a liability model and the confirmation of payee model in the UK has created labels."</em> And labels, Renshaw noted, are "really useful as I'm refining your AI decision." A regulatory choice quietly improved data quality for the entire ecosystem — an unintended consequence worth studying.</li>
+<li><strong>Singapore:</strong> A central operational anti-scam capability. "They adopted a central kind of operational prevention around scam. And they're using AI to find connections… imagine thousands of calls coming in every day. They're using AI to combine those insights and message back to business."</li>
+<li><strong>Brazil:</strong> A market where the pace of adversarial adaptation has forced real-time AI. <em>"They have to use AI within their payments context to adapt what they're doing. What they'd be doing on a Monday isn't working on a Thursday. You've got to change it by the next week. You're not going to do that with some of the legacy kind of approaches."</em></li>
+<li><strong>The Netherlands:</strong> Data pooling and data sharing have <em>"proved the value that more data in the right context and the standard format makes a difference."</em></li>
+<li><strong>Australia:</strong> Pushing further by combining <em>"telco data, social media content, and payment content"</em> — extending visibility beyond the transaction itself to capture the activity that comes before and after.</li>
+</ul>
+<p>He closed with an analogy worth quoting: enterprise AI in fraud is like the cars on the road. The car you bought a few months ago was being built two or three years before that. <em>"Once technology kind of depends on the road, I guess that's why I think we'll be looking at it."</em> The implication: innovation must be continuous because the gap between deployed and emerging capability is structurally widening.</p>
+<h2>Paulo Barbosa, COO, Banfico — Trust, Governance, and Open Frameworks</h2>
+<p><strong>Paulo Barbosa, COO of Banfico</strong>, focused on trust, governance, and the role of collaboration in scaling open finance. Banfico operates a directory and trust framework for open banking ecosystems — exactly the kind of infrastructure that becomes increasingly important as more actors (fintechs, new market entrants, payment initiation services, and eventually AI agents) join the system.</p>
+<p>His framing of the trust problem:</p>
+<blockquote>
+<p><strong>"We have our own directory service, our own trust framework, where we can make sure that this umbrella — all the standards that will then govern the implementation of an open banking system — is enforcing that the different players, the new market entrants… fintechs that are not necessarily the same level of regulation as banks or insurers or even open health, that these new stakeholders coming into this framework, they are all abiding by the same rules and that trust is not broken."</strong></p>
+</blockquote>
+<p>Barbosa stressed that the directory and trust framework must be designed to scale. As open banking expands and new categories of participants join the ecosystem, the integrity of the system depends on every participant operating under the same enforceable rules — independent of size, regulation level, or vertical (banking, insurance, even open health).</p>
+<p>He also signalled forward-readiness for agent-initiated payments, while being careful not to overclaim. While Banfico does not yet treat agentic payments as imminent, the infrastructure is being designed with that future in mind:</p>
+<blockquote>
+<p><strong>"I just learned that the agentic AI [and] agentic payment story is a bit far away. We are prepared. We are looking at how can our open banking directory and how can our open payments framework make sure that if and when the time is right to implement [agentic] payments, we can support that and make sure that trust is not broken across these different interactions independently of the framework we are talking about."</strong></p>
+</blockquote>
+<p>The goal is to ensure trust persists regardless of how the ecosystem evolves — and regardless of whether the entity on the other side of the rail is a human, a regulated institution, a fintech, or, eventually, an agent.</p>
+<h3>Closing Take</h3>
+<p>In response to the moderator's rapid-fire ask for one mindset takeaway, Barbosa returned to the panel's central message:</p>
+<blockquote>
+<p><strong>"Collaboration is key. The regulation is the baseline that we as an industry need to push the ceiling and make sure that we collectively create safe and trusted solutions for consumers."</strong></p>
+</blockquote>
+<p>He explicitly acknowledged Canada's leadership in this kind of cross-industry collaboration, noting that Banfico and others are trying to replicate similar forums in Europe and other parts of the world.</p>
+<h2>Supervisory and Policy Voices: Anne Butler (Bank of Canada) and Judith Hamel (Finance Canada)</h2>
+<p>Across the panel, the supervisory and policy seats added the institutional weight that distinguishes a serious risk-resiliency conversation from a purely technical one.</p>
+<p><strong>Anne Butler, Managing Director, Supervision, Bank of Canada</strong>, represented the central bank's supervisory perspective. Bank of Canada Supervision oversees prudentially regulated payment service providers under the <strong>Retail Payments Activities Act (RPAA)</strong> — a regime that has materially changed who is accountable for what in the Canadian payments stack. The supervisory question on this panel — <em>what does prudent, risk-aware payments innovation actually look like when AI, scams, and open banking are all evolving at once?</em> — sits squarely in her brief.</p>
+<p><strong>Judith Hamel, Director General, Financial Services Division, Department of Finance Canada</strong>, brought the federal policy lens. Finance Canada has been the lead department behind Canada's evolving payments policy stack — open banking framework, payment modernization, anti-fraud strategy, and the legislative work that sits beneath them. Her role on this panel underscored that the rules of engagement for AI, agentic payments, and open finance are being actively drafted, not waiting for a future legislative cycle.</p>
+<p>The combined presence of these two seats — supervision and policy — made it unmistakable that <strong>trust and transparency in payments are no longer purely industry concerns</strong>. They are now an explicitly co-governed responsibility shared between rail operators, infrastructure providers, vendors, supervisors, and federal policymakers.</p>
+<h2>The Bottom Line</h2>
+<p>The combined message from the panel points to a clear conclusion: <strong>AI alone is not enough.</strong> Its true value emerges when combined with high-quality labelled data, shared intelligence, and robust trust frameworks. As Canada's payments ecosystem expands to include new participants — fintechs, payment initiation providers, and eventually autonomous agents — the challenge is no longer just detecting fraud. It is <strong>coordinating trust across an increasingly diverse and dynamic network of human and machine actors</strong>, with both supervision and policy moving in step with the technology.</p>
+<p>Renshaw shows that the data-and-network thesis works in practice across multiple jurisdictions. Barbosa shows that the infrastructure to enforce trust across those networks is being built today — and is being designed with agentic payments in mind, even if that future is not yet imminent. Butler and Hamel anchor that work in the supervisory and policy frameworks that will determine whether it scales safely. And Ford, from the seat of Payments Canada, frames the central question: <em>how do we bridge the gap between rapid speed and systemic safety?</em></p>
+<hr />
+<h2>Key Takeaways</h2>
+<ul>
+<li><strong>25–35%</strong> lift in financial crime prevention from AI at a single institution; <strong>+50%</strong> more (to roughly 40–45%) in collaborative / network mode.</li>
+<li>Enterprise AI in financial crime ≠ consumer-grade AI — explainability, governance, and operational scale are different problems.</li>
+<li>Global learnings: <strong>UK</strong> (Confirmation of Payee + split liability inadvertently creating labelled training data), <strong>Singapore</strong> (centralized scam-call signal aggregation), <strong>Brazil</strong> (Monday-vs-Thursday adversarial speed forcing real-time AI), <strong>Netherlands</strong> (data pooling), <strong>Australia</strong> (cross-channel: telco + social + payments).</li>
+<li><strong>Banfico's directory service and trust framework</strong> are positioned as the connective tissue for open banking — and explicitly designed to be ready for agentic payments "if and when the time is right."</li>
+<li>Regulation is the <strong>floor</strong>, not the ceiling — the industry must collectively push higher.</li>
+<li>Canada is recognized internationally as a leader in cross-industry forums of this type; Banfico is replicating the model in Europe.</li>
+<li>The panel's composition — <strong>Bank of Canada (supervision)</strong> + <strong>Finance Canada (policy)</strong> + <strong>Banfico (trust infrastructure)</strong> + <strong>Feedzai (detection)</strong> + <strong>Payments Canada (moderation)</strong> — is itself the message: risk-resiliency is now a four-corner conversation.</li>
+</ul>
+        </div>
+      </article>
+    </main>
+
+    <aside class="site-sidebar" aria-label="Summit Coverage">
+      
+      <section class="widget coverstory-widget">
+        <span class="cs-flag">FTF Cover Story</span>
+        <h3 class="cs-title">The Agentic Inflection</h3>
+        <p class="cs-body">How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. A cover story across all 23 sessions.</p>
+        <div class="cs-cta"><a href="index-new.html">Read the cover story &rarr;</a></div>
+      </section>
+<section class="widget">
+        <h2 class="widget-title">Summit Coverage</h2>
+        <ul class="widget-list">
+          
+          <li>
+            <div class="thumb" style="background-image:url('images/session-00-hero.png');"></div>
+            <div class="item-body">
+              <a href="session-00-new.html">Session 00 — Powering Economic Prosperity Through Payments — Susan Hawkins Opens Day One</a>
+              <div class="excerpt">Day-One opening keynote: Susan E. Hawkins on Canada's payment infrastructure as a national asset for prosperity, sovereignty, and global competitiveness.</div>
+            </div>
+          </li>
+<li>
+            <div class="thumb" style="background-image:url('images/session-01-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-01-new.html">Session 01 — Delivering Digital Prosperity for Canada</a>
+              <div class="excerpt">Opening keynote setting the agenda for Canada's payments modernization and digital prosperity.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-02-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-02-new.html">Session 02 — Outsmarting the Fraud Factories</a>
+              <div class="excerpt">How the industry is moving from reactive to predictive defences against industrial-scale fraud.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-03-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-03-new.html">Session 03 — Canada's Path to Agentic Commerce</a>
+              <div class="excerpt">Mapping the road from today's checkout to autonomous agent-led purchasing.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-04-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-04-new.html">Session 04 — Leading with AI in the New Era of Fraud and Scams</a>
+              <div class="excerpt">AI as the new frontline in fraud detection, prevention, and scam-victim protection.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-06-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-06-new.html">Session 06 — Tokenized Deposits: Bridging the Gap to Tomorrow's Digital Economy</a>
+              <div class="excerpt">Why tokenized deposits could become the rails of the next-generation digital economy.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-07-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-07-new.html">Session 07 — From Crypto to Core Infrastructure: Stablecoins in Canadian Payments</a>
+              <div class="excerpt">Stablecoins reframed from a crypto story into core Canadian payments infrastructure.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-08-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-08-new.html">Session 08 — Economies of Machines: Tokenization for Agentic Autonomous Finance</a>
+              <div class="excerpt">Tokenization as the substrate for machine-to-machine, autonomous financial flows.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-09-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-09-new.html">Session 09 — Banking in Disguise: When Every App Becomes a Bank</a>
+              <div class="excerpt">Embedded finance is dissolving the boundary between apps and banks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-10-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-10-new.html">Session 10 — Agentic AI in Payments: The Future of Payments Is Autonomous</a>
+              <div class="excerpt">What changes when AI agents — not humans — initiate, authorize, and settle payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-11-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-11-new.html">Session 11 — The Builders of Tomorrow: How AI Is Powering the New Payments Landscape</a>
+              <div class="excerpt">The builders and platforms shaping AI-native payments stacks.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-12-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-12-new.html">Session 12 — Defining the Future of Payments in Canada: The Power of Global Partnerships</a>
+              <div class="excerpt">Why Canada's payments future will be built through cross-border partnerships.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-13-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-13-new.html">Session 13 — Exchanging Ideas with Erin Elofson, President of Mastercard Canada</a>
+              <div class="excerpt">Leadership under uncertainty, responsible AI, and the role of stablecoins — with Mastercard Canada's president.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-14-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-14-new.html">Session 14 — Tokenization Isn't About Crypto. It's About Rewriting the Economics of Payments</a>
+              <div class="excerpt">Tokenization reframed as an economic-architecture story, not a crypto story.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-15-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-15-new.html">Session 15 — Converging Forces: RTR, Open Banking, Stablecoins, Agentic Commerce</a>
+              <div class="excerpt">Four forces converging — and what their intersection means for Canada.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-16-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-16-new.html">Session 16 — Delivering Canada's Real-Time Rail</a>
+              <div class="excerpt">From build to production — the operational and governance work behind RTR.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-17-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-17-new.html">Session 17 — Unlocking the Strategic Value of Payments</a>
+              <div class="excerpt">Payments as strategy, not utility: where the real economic value sits.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-18-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-18-new.html">Session 18 — Canada Strong for All: Fireside with Min. François-Philippe Champagne</a>
+              <div class="excerpt">Closing fireside with the Minister of Finance and National Revenue — payments, RTR, financial crime, innovation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-19-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-19-new.html">Session 19 — Deep Dive: Opening Remarks (Tom Hewson)</a>
+              <div class="excerpt">Tom Hewson opens the Deep Dive track with a strategic framing of payments transformation.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-20-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-20-new.html">Session 20 — Deep Dive: Remarks from ISED Canada</a>
+              <div class="excerpt">The federal innovation portfolio's perspective on Canada's payments and AI agenda.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-21-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-21-new.html">Session 21 — Deep Dive: Deploying AI in Payments — From Proof of Concept to Business Impact</a>
+              <div class="excerpt">How AI is moving from pilots into measurable, production business impact in payments.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-22-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-22-new.html">Session 22 — Deep Dive: Enabling AI Innovation</a>
+              <div class="excerpt">What it takes — data, talent, governance, capital — to actually enable AI innovation at scale.</div>
+            </div>
+          </li>
+          <li>
+            <div class="thumb" style="background-image:url('images/session-23-hero.jpg');"></div>
+            <div class="item-body">
+              <a href="session-23-new.html">Session 23 — Deep Dive: From Manual to Measurable — Proving AI's Impact on Payment Transformation</a>
+              <div class="excerpt">Building the measurement discipline that turns AI promises into provable payments outcomes.</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-widgets">
+    <div>
+      <h3>FTF</h3>
+      <p>Founded by the team behind <a href="https://bankingfrontiers.com/" rel="noopener"><strong>Banking Frontiers</strong></a>, FTF is a global ecosystem of fintech mentors, enthusiasts, and innovators. Our advisory panel of bankers, investors, and tech experts connects fintech leaders across South and Southeast Asia to revolutionize financial services.</p>
+      <div class="follow">Follow Us On:</div>
+      <div class="footer-social">
+        <a class="twitter" href="#" aria-label="Twitter / X"><span>𝕏</span> twitter</a>
+        <a class="youtube" href="#" aria-label="YouTube"><span>&#9654;</span> youtube</a>
+        <a class="linkedin" href="#" aria-label="LinkedIn"><span>in</span> linkedin</a>
+      </div>
+    </div>
+    <div></div>
+    <div>
+      <ul class="footer-links">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-info">Copyright © Fintech Frontiers Live · Theme: Updated News By <a href="#">Adore Themes</a>.</div>
+</footer>
+
+</body>
+</html>
