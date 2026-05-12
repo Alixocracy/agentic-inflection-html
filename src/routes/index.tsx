@@ -63,7 +63,7 @@ function Index() {
         </p>
 
         <a
-          href="/articles/index.html"
+          href="/articles/index-new.html"
           className="group mt-12 block overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-lg"
         >
           <div className="aspect-[16/9] overflow-hidden bg-neutral-100">
