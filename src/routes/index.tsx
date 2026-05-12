@@ -33,7 +33,7 @@ function Index() {
           />
           <div className="flex items-center gap-6">
             <a
-              href="/articles/index.html"
+              href="/articles/index-new.html"
               className="text-sm font-medium text-neutral-700 hover:text-neutral-950"
             >
               Summit Coverage →
