@@ -33,7 +33,7 @@ function Index() {
           />
           <div className="flex items-center gap-6">
             <a
-              href="/articles/index.html"
+              href="/articles/index-new.html"
               className="text-sm font-medium text-neutral-700 hover:text-neutral-950"
             >
               Summit Coverage →
@@ -63,7 +63,7 @@ function Index() {
         </p>
 
         <a
-          href="/articles/index.html"
+          href="/articles/index-new.html"
           className="group mt-12 block overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-lg"
         >
           <div className="aspect-[16/9] overflow-hidden bg-neutral-100">
