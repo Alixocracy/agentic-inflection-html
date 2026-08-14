@@ -3,13 +3,13 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Financial Technology Frontier — Payments Canada Summit 2026" },
+      { title: "Sarzamin Magazine — Payments Canada Summit 2026" },
       {
         name: "description",
         content:
-          "FTF cover story: how Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money.",
+          "Sarzamin Magazine cover story: how Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money.",
       },
-      { property: "og:title", content: "Financial Technology Frontier" },
+      { property: "og:title", content: "Sarzamin Magazine" },
       {
         property: "og:description",
         content:
