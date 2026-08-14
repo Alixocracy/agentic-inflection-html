@@ -67,7 +67,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const SITE_DESCRIPTION = "Sarzamin Magazine - Sarzamin Magazine. How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflection.";
+const SITE_DESCRIPTION = "Sarzamin Magazine. How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflection.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
