@@ -67,22 +67,22 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const SITE_DESCRIPTION = "FTF - Financial Technology Frontier. How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflection.";
+const SITE_DESCRIPTION = "Sarzamin Magazine - Sarzamin Magazine. How Payments Canada Summit 2026 redrew the map for AI, trust, and the future of money. Three days, 23 sessions, one inflection.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "FTF" },
+      { title: "Sarzamin Magazine" },
       { name: "description", content: SITE_DESCRIPTION },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "FTF" },
+      { property: "og:title", content: "Sarzamin Magazine" },
       { property: "og:description", content: SITE_DESCRIPTION },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "FTF" },
+      { name: "twitter:title", content: "Sarzamin Magazine" },
       { name: "twitter:description", content: SITE_DESCRIPTION },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9417ac06-fca0-4438-b7a0-a06aa6495968" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9417ac06-fca0-4438-b7a0-a06aa6495968" },
