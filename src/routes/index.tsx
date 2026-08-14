@@ -31,21 +31,13 @@ function Index() {
             alt="Sarzamin"
             className="h-10 w-auto"
           />
-          <div className="flex items-center gap-6">
-            <a
-              href="/articles/index-new.html"
-              className="text-sm font-medium text-neutral-700 hover:text-neutral-950"
-            >
-              Summit Coverage →
-            </a>
-            <a
-              href="/payment-canada-summit-20206-alix-md-reports.zip"
-              download
-              className="rounded-full bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-700"
-            >
-              Download Reports
-            </a>
-          </div>
+          <a
+            href="/articles/index-new.html"
+            className="text-sm font-medium text-neutral-700 hover:text-neutral-950"
+          >
+            Summit Coverage →
+          </a>
+
         </div>
       </header>
 
